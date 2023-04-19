@@ -1,710 +1,817 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>YSAK ELECTRONICS!</title>
-
-  <!-- 
-    - favicon
-  -->
-  <link rel="shortcut icon" href="./tv icon.svg" type="image/svg+xml">
-
-  <!-- 
-    - custom css link
-  -->
-  <link rel="stylesheet" href="./assets/css/style.css">
-
-  <!-- 
-    - google font link
-  -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Rubik:wght@400;500;600;700&family=Shadows+Into+Light&display=swap"
-    rel="stylesheet">
-
-  <!-- 
-    - preload images
-  -->
-  <link rel="preload" as="image" href="./assets/images/hero-banner.png" media="min-width(768px)">
-  <link rel="preload" as="image" href="./assets/images/hero-banner-bg.png" media="min-width(768px)">
-  <link rel="preload" as="image" href="./assets/images/hero-bg.jpg">
-
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="led_tv.png">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"/>
+    <!-- AOS Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Tailwind Library -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/creativetimofficial/tailwind-starter-kit/compiled-tailwind.min.css" />
+    <title>Ysak electronics </title>
 </head>
+<body class="text-gray-800 antialiased">
 
-<body id="top">
-
-  <!-- 
-    - #HEADER
-  -->
-
-  <header class="header" data-header>
-    <div class="container">
-
-      <h1>
-        <a href="#" class="logo">YSAK ELECTRONICS<span class="span">.</span></a>
-      </h1>
-
-      <nav class="navbar" data-navbar>
-        <ul class="navbar-list">
-
-          <li class="nav-item">
-            <a href="#home" class="navbar-link" data-nav-link>Home</a>
-          </li>
-
-          <li class="nav-item">
-            <a href="#about" class="navbar-link" data-nav-link>About Us</a>
-          </li>
-
-          <li class="nav-item">
-            <a href="#food-menu" class="navbar-link" data-nav-link>Shop</a>
-          </li>
-
-          <li class="nav-item">
-            <a href="#blog" class="navbar-link" data-nav-link>Blog</a>
-          </li>
-
-          <li class="nav-item">
-            <a href="#" class="navbar-link" data-nav-link>Contact Us</a>
-          </li>
-
-        </ul>
-      </nav>
-
-      <div class="header-btn-group">
-        <button class="search-btn" aria-label="Search" data-search-btn>
-          <ion-icon name="search-outline"></ion-icon>
-        </button>
-
-        <a href="https://t.me/ysakelectronics"><button class="btn btn-hover"><!-- icon666.com - MILLIONS vector ICONS FREE --><svg  width=40px version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"><circle style="fill:#41B4E6;" cx="255.997" cy="256" r="255.997"/><path style="fill:#0091C8;" d="M512,256.003c0-6.238-0.235-12.419-0.673-18.546L405.228,131.36L106.772,248.759l114.191,114.192 l1.498,5.392l1.939-1.955l0.008,0.008l-1.947,1.947L348.778,494.66C444.298,457.5,512,364.663,512,256.003z"/><polygon style="fill:#FFFFFF;" points="231.138,293.3 346.829,380.647 405.228,131.36 106.771,248.759 197.588,278.84 363.331,167.664 "/><polygon style="fill:#D2D2D7;" points="197.588,278.84 222.461,368.344 231.138,293.3 363.331,167.664 "/><polygon style="fill:#B9B9BE;" points="268.738,321.688 222.461,368.344 231.138,293.3 "/></svg></button></a>
-
-        <button class="nav-toggle-btn" aria-label="Toggle Menu" data-menu-toggle-btn>
-          <span class="line top"></span>
-          <span class="line middle"></span>
-          <span class="line bottom"></span>
-        </button>
+  <!-- Navigation -->
+  <nav class="top-0 absolute z-50 w-full flex flex-wrap items-center justify-between px-2 py-3 navbar-expand-lg">
+      <div class="container px-4 mx-auto flex flex-wrap items-center justify-between">
+        <!-- Nav Left Side -->
+          <div class="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
+              <a class="text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-no-wrap uppercase text-white" href="https://t.me/ysakelectronics">
+                <!-- Nav Title -->
+                Ysak electronics
+              </a>
+              <!-- Hamburger Menu (Mobile) -->
+              <button class="cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none" type="button" onclick="toggleNavbar('example-collapse-navbar')">
+                <!-- Icon -->
+                <i class="text-white fas fa-bars"></i>
+              </button>
+          </div>
+          <!-- Nav Flex Row -->
+          <div class="lg:flex flex-grow items-center bg-white lg:bg-transparent lg:shadow-none hidden" id="example-collapse-navbar">
+            <!-- <ul class="flex flex-col lg:flex-row list-none mr-auto">
+              <li class="flex items-center">
+                <a class="lg:text-white lg:hover:text-gray-300 text-gray-800 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold" 
+                href="https://www.creative-tim.com/learning-lab/tailwindcss-starter-project#/landing">
+                Icon
+                <i class="lg:text-gray-300 text-gray-500 far fa-file-alt text-lg leading-lg mr-2"></i>
+                Docs
+                </a>
+              </li>
+            </ul> -->
+        <!-- Nav Right Side -->
+        <!-- <ul class="flex flex-col lg:flex-row list-none lg:ml-auto"> -->
+          <!-- Social Media Button -->
+          <!-- <li class="flex items-center">
+            <a class="lg:text-white lg:hover:text-gray-300 text-gray-800 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
+              href="#pablo"> -->
+              <!-- Icon -->
+              <!-- <i class="lg:text-gray-300 text-gray-500 fab fa-facebook text-lg leading-lg "></i>
+              <span class="lg:hidden inline-block ml-2">Share</span>
+            </a>
+          </li> -->
+          <!-- Social Media Button -->
+          <!-- <li class="flex items-center">
+            <a class="lg:text-white lg:hover:text-gray-300 text-gray-800 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
+              href="#pablo"> -->
+              <!-- Icon -->
+              <!-- <i class="lg:text-gray-300 text-gray-500 fab fa-twitter text-lg leading-lg "></i>
+              <span class="lg:hidden inline-block ml-2">Tweet</span>
+            </a>
+          </li> -->
+          <!-- Social Media Button -->
+          <!-- <li class="flex items-center">
+            <a class="lg:text-white lg:hover:text-gray-300 text-gray-800 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
+              href="#pablo"> -->
+              <!-- Icon -->
+              <!-- <i class="lg:text-gray-300 text-gray-500 fab fa-github text-lg leading-lg "></i>
+              <span class="lg:hidden inline-block ml-2">Star</span>
+            </a>
+          </li> -->
+          <!-- Button -->
+          <!-- <li class="flex items-center">
+            <button
+              class="bg-white text-gray-800 active:bg-gray-100 text-xs font-bold uppercase px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3"
+              type="button"
+              style="transition: all 0.15s ease 0s;">
+              Icon
+              <i class="fas fa-arrow-alt-circle-down"></i>
+              Download
+            </button>
+          </li> -->
+        <!-- </ul> -->
       </div>
-
     </div>
-  </header>
+  </nav>
+  <!-- End of Navigation -->
 
-
-
-
-
-  <!-- 
-    - #SEARCH BOX
-  -->
-
-  <div class="search-container" data-search-container>
-
-    <div class="search-box">
-      <input type="search" name="search" aria-label="Search here" placeholder="Type keywords here..."
-        class="search-input">
-
-      <button class="search-submit" aria-label="Submit search" data-search-submit-btn>
-        <ion-icon name="search-outline"></ion-icon>
-      </button>
-    </div>
-
-    <button class="search-close-btn" aria-label="Cancel search" data-search-close-btn></button>
-
-  </div>
-
-
-
-
-
+  <!-- Splash Page -->
   <main>
-    <article>
+    <div class="relative pt-16 pb-32 flex content-center items-center justify-center" style="min-height: 75vh;">
+      <!-- Background Image -->
+      <div
+        class="absolute top-0 w-full h-full bg-center bg-cover"
+        style='background-image: url("https://www.theplasmacentre.com/images/sized/zoom/products_28841_fs1500bayo.jpg");'>
+        <!-- Overlay -->
+        <span id="blackOverlay" class="w-full h-full absolute opacity-75 bg-black"></span>
+      </div>
+      <!-- Text Over Main Background -->
+      <div class="container relative mx-auto">
+        <div class="items-center flex flex-wrap">
+          <div class="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
+            <div class="pr-12">
+              <h1 class="text-white font-semibold text-5xl" data-aos="fade-up">
+                Ysak LED tv maintenance.
+              </h1>
+              <p class="mt-4 text-lg text-gray-300" data-aos="fade-right" data-aos-delay="1000">
+                We understand that your TV is an important part of your home entertainment system,
+                if your Tv are being defective  we are ready to help you get the most out of it.   
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Making Polygon Shape in Background -->
+      <div
+        class="top-auto bottom-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden"
+        style="height: 70px; transform: translateZ(0);"
+      >
+        <svg
+          class="absolute bottom-0 overflow-hidden"
+          xmlns="http://www.w3.org/2000/svg"
+          preserveAspectRatio="none"
+          version="1.1"
+          viewBox="0 0 2560 100"
+          x="0"
+          y="0"
+        >
+          <polygon
+            class="text-gray-300 fill-current"
+            points="2560 0 2560 100 0 100"
+          ></polygon>
+        </svg>
+      </div>
+    </div>
+    <!-- End of Splash Page -->
 
-      <!-- 
-        - #HERO
-      -->
+    <!-- Services Section -->
+    <section class="pb-20 bg-gray-300 -mt-24">
+      <!-- 3 Card Section -->
+      <div class="container mx-auto px-4">
+        <div class="flex flex-wrap">
+          <!-- Card -->
+          <div class="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center" data-aos="fade-right" data-aos-delay="1200">
+            <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
+              <div class="px-4 py-5 flex-auto">
+                <div class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-red-400">
+                  <!-- Icon -->
+                  <i class="fas fa-guarranty">
+                    <img src="guarantee.png" alt="" width="300">
+                  </i>
+                </div>
+                <!-- Text Box -->
+                <h6 class="text-xl font-semibold">guaranted work</h6>
+                <p class="mt-2 mb-4 text-gray-600">
+                we want our customers to feel confident and satisfied with the services we provide. we guarantee on all of our maintenance services.       
+    </p>
+              </div>
+            </div>
+          </div>
+          <!-- Card -->
+          <div class="w-full md:w-4/12 px-4 text-center" data-aos="fade-up" data-aos-delay="1400">
+            <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
+              <div class="px-4 py-5 flex-auto">
+                <div class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-blue-400">
+                  <!-- Icon -->
+                  <i class="fas fa-atom"></i>
+                </div>
+                <!-- Text Box -->
+                <h6 class="text-xl font-semibold">Full of accessary</h6>
+                <p class="mt-2 mb-4 text-gray-600">
+straring from 19 inch tv upto 65 inch screen tvs we have all types of televisions accessory                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Card -->
+          <div class="pt-6 w-full md:w-4/12 px-4 text-center" data-aos="fade-left" data-aos-delay="1600">
+            <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
+              <div class="px-4 py-5 flex-auto">
+                <div class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-green-400">
+                  <!-- Icon -->
+                  <i class="fas fa-bolt">
+                    <!-- <img src="technician.png" alt=""> -->
+                  </i>
+                </div>
+                <!-- Text Box -->
+                <h6 class="text-xl font-semibold">Specialized Technician</h6>
+                <p class="mt-2 mb-4 text-gray-600">
+we specialized our service giving only led tvs with specialized technician                </p>
+              </div>
+            </div>
+          </div>
+        </div>
 
-      <section class="hero" id="home" style="background-image: url('./assets/images/hero-bg.jpg')">
-        <div class="container">
-
-          <div class="hero-content">
-
-            <p class="hero-subtitle">YSAK ELECTRONICS</p>
-
-            <h2 class="h1 hero-title">LED Tv Maintenance </h2>
-
-            <p class="hero-text">lot`s of accessory with specialized technician
+        <!-- Text Box and Card Container -->
+        <div class="flex flex-wrap items-center mt-32">
+          <!-- Text Box Container -->
+          <div class="w-full md:w-5/12 px-4 mr-auto ml-auto" data-aos="zoom-in-right">
+            <!-- Text Box -->
+            <div class="text-gray-600 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-gray-100">
+              <!-- Icon -->
+              <i class="fas fa-star text-xl"></i>
+            </div>
+            <h3 class="text-3xl mb-2 font-semibold leading-normal">
+              does your Tv have problem ?
+            </h3>
+            <p class="text-lg font-light leading-relaxed mt-4 mb-4 text-gray-700">
+              here we are to help you.
+              We understand that your TV is an important part of your home entertainment system,
+              we don`t want you be sad when it have problem with in it .
+            </p>
+            <p class="text-lg font-light leading-relaxed mt-0 mb-4 text-gray-700">
+in case you have any issues we are happy to help you from our heart            </p>
+            
               
-            </p>
+              <button class="bg-red-400 font-bold text-gray-800 mt-8" onclick="location.href='tel:0926737152'">Call Now !</buttonclass=>
 
-           
-
+            
           </div>
 
-          <figure class="hero-banner">
-             
-         <img  src="./assets/images/4k tv.png" style="margin-left: 50px;" width="250px"  >
-          </figure>
- <button class="btn" style="margin-left: 100px; ">home to home</button>
+          <!-- Image Cap & Text Card -->
+          <div class="w-full md:w-4/12 px-4 mr-auto ml-auto" data-aos="flip-left" data-aos-delay="1000">
+            <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg bg-orange-500">
+              <!-- Image -->
+              <img
+                alt="..."
+                src="ysak logo.jpg"
+                class="w-full align-middle rounded-t-lg"
+              />
+              <blockquote class="relative p-8 mb-4">
+                <!-- Making Polygon Shape in Card -->
+                <svg
+                  preserveAspectRatio="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 583 95"
+                  class="absolute left-0 w-full block"
+                  style="height: 95px; top: -94px;"
+                >
+                  <polygon
+                    points="-30,95 583,95 583,65"
+                    class="text-orange-500 fill-current"
+                  ></polygon>
+                </svg>
+                <!-- Text Box -->
+                <h4 class="text-xl font-bold text-white">
+                 just call to us
+                </h4>
+                <p class="text-md font-light mt-2 text-white">
+                  we are 12/7 ready to give you home to home LED Tv maintenance services in ADDISS ABEBA.                </p>
+              </blockquote>
+            </div>
+          </div>
         </div>
-      </section>
+      </div>
+    </section>
+    <!-- End of Services Section -->
 
-
-
-
-
-      <!-- 
-        - #PROMO
-      -->
-
-      <section class="section section-divider white promo">
-        <div class="container">
-
-          <ul class="promo-list has-scrollbar">
-
-            <li class="promo-item">
-              <div class="promo-card">
-
-                <div class="card-icon">
-                    <g clip-path="url(#A)" fill="#ff9d2d">
-                      <path
-                        d="M43.033.002L42.563 0c-7.896 0-15.555 1.546-22.767 4.597-6.965 2.946-13.22 7.163-18.592 12.535l-.043.044c-1.548 1.551-1.546 4.075.004 5.625l2.256 2.257c.754.754 1.76 1.17 2.832 1.17h.001a3.98 3.98 0 0 0 2.834-1.171l.04-.04a1.7 1.7 0 0 1 1.21-.499h.021a1.73 1.73 0 0 1 1.238.537l4.596 4.807c.466.488 1.095.761 1.768.768h.028c.663 0 1.285-.258 1.756-.729.975-.975.993-2.58.04-3.577l-3.308-3.46c-.295-.309-.311-.797-.035-1.087a.76.76 0 0 1 .554-.239h.001a.76.76 0 0 1 .553.236l1.041 1.09c.95.994 2.49 1.079 3.507.195a2.5 2.5 0 0 0 .865-1.787 2.53 2.53 0 0 0-.696-1.858l-.755-.79a1.72 1.72 0 0 1-.454-1.511c.099-.549.444-1.003.944-1.245a46.86 46.86 0 0 1 20.561-4.69l.419.002c1.07.011 2.07-.399 2.827-1.149a3.96 3.96 0 0 0 1.179-2.828V3.984A4 4 0 0 0 43.033.002h0zm2.2 7.199a2.21 2.21 0 0 1-.659 1.581 2.18 2.18 0 0 1-1.575.641l-.435-.002a48.6 48.6 0 0 0-21.325 4.865A3.44 3.44 0 0 0 19.33 16.8a3.46 3.46 0 0 0 .912 3.037l.756.79a.76.76 0 0 1-.052 1.106c-.303.263-.789.226-1.085-.083l-1.041-1.089a2.53 2.53 0 0 0-1.822-.779 2.5 2.5 0 0 0-1.827.784c-.929.976-.912 2.518.037 3.512l3.308 3.46a.82.82 0 0 1-.012 1.121.74.74 0 0 1-.523.215c-.197-.002-.381-.083-.519-.226l-4.596-4.808a3.47 3.47 0 0 0-2.487-1.08h-.042a3.44 3.44 0 0 0-2.449 1.011l-.014.014-.009.009-.022.022c-.423.423-.988.656-1.591.656s-1.168-.232-1.591-.655L2.404 21.56a2.23 2.23 0 0 1 0-3.145l.042-.042A56.54 56.54 0 0 1 20.48 6.214c6.994-2.958 14.423-4.458 22.083-4.458l.454.002h0a2.24 2.24 0 0 1 2.215 2.226v3.218zm-.908 6.202a.88.88 0 0 0-.878.878v43.292c0 .412-.314.574-.411.614s-.433.147-.724-.144L11.436 27.166a.88.88 0 0 0-1.242 0 .88.88 0 0 0 0 1.242l30.877 30.877c.469.469 1.073.715 1.696.715.314 0 .633-.063.942-.19a2.38 2.38 0 0 0 1.494-2.237V14.281a.88.88 0 0 0-.878-.878h0zm-6.657-1.125c-2.112 0-3.83 1.718-3.83 3.83s1.718 3.83 3.83 3.83 3.83-1.718 3.83-3.83-1.718-3.83-3.83-3.83zm0 5.903c-1.143 0-2.074-.93-2.074-2.074s.93-2.073 2.074-2.073 2.073.93 2.073 2.073-.93 2.074-2.073 2.074zM22.575 34.938a3.55 3.55 0 0 0 3.547 3.547 3.55 3.55 0 0 0 3.547-3.547 3.55 3.55 0 0 0-3.547-3.547 3.55 3.55 0 0 0-3.547 3.547h0zm3.547-1.791c.987 0 1.791.803 1.791 1.791s-.803 1.791-1.791 1.791-1.791-.803-1.791-1.791.804-1.791 1.791-1.791zm12.81-2.283a3.68 3.68 0 0 0-3.672 3.672 3.68 3.68 0 0 0 3.672 3.672 3.68 3.68 0 0 0 3.672-3.672 3.68 3.68 0 0 0-3.672-3.672zm0 5.588a1.92 1.92 0 0 1-1.916-1.915 1.92 1.92 0 0 1 1.916-1.916 1.92 1.92 0 0 1 1.915 1.916 1.92 1.92 0 0 1-1.915 1.915zm2.97 8.702a3.92 3.92 0 0 0-3.913-3.912h-.645a3.92 3.92 0 0 0-3.913 3.912 1.7 1.7 0 0 0 1.697 1.697h.23l-.037.687a1.57 1.57 0 0 0 .427 1.16c.294.31.709.488 1.136.488h1.562a1.57 1.57 0 0 0 1.136-.488c.294-.31.45-.733.428-1.16l-.037-.687h.23a1.7 1.7 0 0 0 1.697-1.697h0zm-2.515-.059a1.2 1.2 0 0 0-.87.374c-.225.238-.345.562-.327.889l.057 1.073h-1.16l.057-1.073a1.2 1.2 0 0 0-1.198-1.263h-.758a2.16 2.16 0 0 1 2.156-2.097h.645a2.16 2.16 0 0 1 2.155 2.097h-.758zm-9.689-26.32a4.46 4.46 0 0 0-4.454 4.455v.76a4.46 4.46 0 0 0 4.454 4.455c1.017 0 1.844-.827 1.844-1.843v-.437l.975.052a1.69 1.69 0 0 0 1.251-.46c.335-.318.526-.764.526-1.225v-1.841c0-.461-.192-.908-.526-1.225s-.792-.485-1.251-.46l-.975.052v-.437c0-1.017-.827-1.844-1.844-1.844zm2.84 3.986v1.697l-1.43-.076c-.344-.017-.682.107-.931.343s-.392.569-.392.912v.963c0 .049-.039.087-.087.087A2.7 2.7 0 0 1 27 23.99v-.761a2.7 2.7 0 0 1 2.698-2.698c.048 0 .087.039.087.087v.964c0 .343.143.676.392.912a1.26 1.26 0 0 0 .931.343l1.43-.076z" />
-                    </g>
-                    <defs>
-                      <clipPath id="A">
-                        <path fill="#fff" d="M0 0h60v60H0z" />
-                      </clipPath>
-                    </defs>
-                  </svg>
-                </div>
-
-                <h3 class="h3 card-title">lots of resources</h3>
-                <br><hr><br>
-                <p class="card-text">
-           we have plenty of brand tv`s accessory screen,board,edge lamp,backlight, T-con,remote,stand
-                </p>
-
-                <img loading="lazy" width="5px" <!-- icon666.com - MILLIONS vector ICONS FREE --><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512"><defs><linearGradient id="linear-gradient" x1="20" y1="256" x2="492" y2="256" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#62bb46"/><stop offset="0.444" stop-color="#329f86"/><stop offset="0.815" stop-color="#0e8bb6"/><stop offset="1" stop-color="#0083c8"/></linearGradient></defs><g id="gradient"><path d="M446.15,176.853l45.314-78.486a4,4,0,0,0,0-4L445.064,14a4,4,0,0,0-3.464-2H348.8a4,4,0,0,0-3.464,2l-45.28,78.427H211.944L166.664,14a4,4,0,0,0-3.464-2H70.4a4,4,0,0,0-3.464,2l-46.4,80.367a4,4,0,0,0,0,4l46.4,80.367a4,4,0,0,0,3.464,2h90.456l45.28,78.427a4,4,0,0,0,3.464,2h90.388l45.348,78.546a4,4,0,0,0,3.464,2h92.8a4,4,0,0,0,3.464-2l46.4-80.368a4,4,0,0,0,0-4ZM351.109,20h88.182l44.09,76.367-44.09,76.367H351.109l-44.09-76.367ZM315.124,227.3l-15.64-22.486A4,4,0,0,0,292.2,207.1v46.061H267.621v-54.5l2.855-5.711,6.671-5.969a4,4,0,0,0-5.335-5.962l-4.042,3.618-6.032-7.769,3.082-2.156,28.34-.042a23.193,23.193,0,0,1,18.776,9.61L327.5,205.861Zm-4.42,7.655L300.2,253.15v-33.3Zm-92.937-36.519a4.005,4.005,0,0,0-4.48,1.533l-17.535,25.206L183.4,203.78l14.067-19.5a23.191,23.191,0,0,1,18.774-9.608l31.566.029,2.687,2.088-5.609,7.751-3.932-3.519a4,4,0,1,0-5.335,5.962l6.671,5.969,2.855,5.711v54.5H220.57V202.254A4,4,0,0,0,217.767,198.437ZM249.14,142.1a3.166,3.166,0,0,1,2.166.839,4,4,0,0,0,5.978-.6,16.521,16.521,0,0,0,2.639-5.777l6.937-.2V151.73a4.079,4.079,0,0,1-3.532,4.047,3.976,3.976,0,0,0-3.738,3.993c0,.166.03,8.816.03,8.816l-3.5,2.445-2.985-2.319V152.58a4,4,0,0,0-4-4,3.24,3.24,0,1,1,0-6.48Zm-3.24-7.524V130.57a10.4,10.4,0,0,1,7.29-9.947l10.5-3.332A6.358,6.358,0,0,1,265.57,117a6.158,6.158,0,0,1,6.15,6.15v5.064l-15.456.448a4,4,0,0,0-3.884,4,8.734,8.734,0,0,1-.2,1.856A11.486,11.486,0,0,0,245.9,134.576Zm6.82,61.352-2.534-5.069,5.927-8.192,6.423,8.275-2.493,4.986a4,4,0,0,0-.422,1.789v55.444h-6.478V197.717A4,4,0,0,0,252.72,195.928Zm79.167,2.338L318.426,179.6A31.212,31.212,0,0,0,293.16,166.67l-25.54.046v-3.91a12.06,12.06,0,0,0,7.24-11.076v-15.6l.975-.027a4,4,0,0,0,3.885-4v-8.95a14.159,14.159,0,0,0-18.43-13.492L250.772,113A18.367,18.367,0,0,0,237.9,130.57v14.77a11.261,11.261,0,0,0,7.24,10.5V166.7l-28.9-.026a31.207,31.207,0,0,0-25.264,12.93l-11.962,16.584L167.8,176.764l44.073-76.337h88.25l44.125,76.426ZM28.619,96.367,72.709,20h88.182l44.09,76.367-44.09,76.367H72.709ZM200.172,232.832l12.4-17.823v38.152h-.66ZM439.291,333.707H351.109l-44.09-76.368,44.227-76.6h87.908l44.227,76.6ZM116,36a60,60,0,1,0,60,60A60.068,60.068,0,0,0,116,36Zm0,112a52,52,0,1,1,52-52A52.059,52.059,0,0,1,116,148Zm0-95.667A43.667,43.667,0,1,0,159.667,96,43.717,43.717,0,0,0,116,52.333Zm0,79.334A35.667,35.667,0,1,1,151.667,96,35.707,35.707,0,0,1,116,131.667Zm20.171-46.761a4,4,0,0,1-1.577,5.432l-16.666,9.167a4,4,0,0,1-4.976-.914l-17-20a4,4,0,1,1,6.1-5.182l14.885,17.513,13.806-7.593A4,4,0,0,1,136.171,84.906ZM376,164h40a28.032,28.032,0,0,0,28-28,84.415,84.415,0,0,0-32-65.962V56a30.043,30.043,0,0,1,3.155-13.366l4.423-8.845a4,4,0,0,0-2.589-5.664L405.4,25.166a37.668,37.668,0,0,0-18.373-.046l-12,3a4,4,0,0,0-2.608,5.669l4.423,8.844A30.05,30.05,0,0,1,380,56V70.038A84.415,84.415,0,0,0,348,136,28.032,28.032,0,0,0,376,164ZM388,60h16v8H388Zm.97-27.119a29.638,29.638,0,0,1,14.452.036l6.782,1.731L408,39.056A38.107,38.107,0,0,0,404.214,52H387.786A38.107,38.107,0,0,0,384,39.056l-2.192-4.385ZM385.353,76h21.294A76.38,76.38,0,0,1,436,136a20.023,20.023,0,0,1-20,20H376a20.023,20.023,0,0,1-20-20A76.38,76.38,0,0,1,385.353,76ZM380,106a12.308,12.308,0,0,1,8.427-11.692,20.312,20.312,0,0,1,2.773-.689V88a4,4,0,0,1,8,0v5.791a20.157,20.157,0,0,1,4.536,1.605l2.053,1.026a4,4,0,0,1-3.578,7.156l-2.053-1.027a11.976,11.976,0,0,0-9.2-.654,4.325,4.325,0,0,0,0,8.206l10.718,3.572a15.1,15.1,0,0,1,0,28.65,17.773,17.773,0,0,1-2.43.61V148a4,4,0,0,1-8,0v-5.41c-.308-.084-.618-.164-.921-.265l-7.59-2.53a4,4,0,0,1,2.53-7.59l7.589,2.53a10,10,0,0,0,6.292,0,7.1,7.1,0,0,0,0-13.47l-10.719-3.573A12.308,12.308,0,0,1,380,106Zm65.924,118.207a4,4,0,0,0-1.171-2.829l-14.131-14.131a4,4,0,0,0-5.657,0l-5.682,5.683a48.571,48.571,0,0,0-9.291-3.85v-8.035a4,4,0,0,0-4-4H386.008a4,4,0,0,0-4,4v8.035a48.545,48.545,0,0,0-9.291,3.85l-5.682-5.682a4,4,0,0,0-5.657,0l-14.131,14.131a4,4,0,0,0,0,5.657l5.682,5.682a48.545,48.545,0,0,0-3.85,9.291h-8.035a4,4,0,0,0-4,4v19.984a4,4,0,0,0,4,4h8.035a48.545,48.545,0,0,0,3.85,9.291l-5.682,5.682a4,4,0,0,0,0,5.657l14.131,14.131a4,4,0,0,0,5.657,0l5.682-5.682a48.545,48.545,0,0,0,9.291,3.85v8.035a4,4,0,0,0,4,4h19.984a4,4,0,0,0,4-4V302.92a48.545,48.545,0,0,0,9.291-3.85l5.682,5.682a4,4,0,0,0,5.657,0l14.131-14.131a4,4,0,0,0,0-5.657l-5.682-5.682a48.545,48.545,0,0,0,3.85-9.291h8.035a4,4,0,0,0,4-4V246.008a4,4,0,0,0-4-4H442.92a48.545,48.545,0,0,0-3.85-9.291l5.682-5.682A4,4,0,0,0,445.924,224.207Zm-6.089,25.8h7.12v11.984h-7.12a4,4,0,0,0-3.9,3.114,40.591,40.591,0,0,1-5.259,12.691,4,4,0,0,0,.556,4.961l5.037,5.035-8.475,8.475-5.035-5.037a4,4,0,0,0-4.961-.556,40.591,40.591,0,0,1-12.691,5.259,4,4,0,0,0-3.114,3.9v7.12H390.008v-7.12a4,4,0,0,0-3.114-3.9,40.591,40.591,0,0,1-12.691-5.259,4,4,0,0,0-4.961.556l-5.035,5.037-8.475-8.475,5.037-5.035a4,4,0,0,0,.556-4.961,40.591,40.591,0,0,1-5.259-12.691,4,4,0,0,0-3.9-3.114h-7.12V250.008h7.12a4,4,0,0,0,3.9-3.114,40.591,40.591,0,0,1,5.259-12.691,4,4,0,0,0-.556-4.961l-5.037-5.035,8.475-8.475,5.035,5.037a4,4,0,0,0,4.961.556,40.591,40.591,0,0,1,12.691-5.259,4,4,0,0,0,3.114-3.9v-7.12h11.984v7.12a4,4,0,0,0,3.114,3.9,40.612,40.612,0,0,1,12.691,5.258,4,4,0,0,0,4.961-.555l5.035-5.037,8.475,8.475-5.037,5.035a4,4,0,0,0-.556,4.961,40.591,40.591,0,0,1,5.259,12.691A4,4,0,0,0,439.835,250.008ZM396,226.354A29.646,29.646,0,1,0,425.646,256,29.679,29.679,0,0,0,396,226.354Zm0,51.292A21.646,21.646,0,1,1,417.646,256,21.67,21.67,0,0,1,396,277.646ZM408,348H350.75a21.914,21.914,0,0,0-14.464,5.44l-54.924,48.054L242.851,319.54A34.126,34.126,0,0,0,212.08,300H140v-4.087c.665.052,1.332.087,2,.087a14.015,14.015,0,0,0,14-14V257.651a19.237,19.237,0,0,0,15.95-18.921V225.96a4,4,0,0,0-4-4H128a24.027,24.027,0,0,0-24,24v24.02a14.042,14.042,0,0,0,12,13.875V300H48a28.032,28.032,0,0,0-28,28V450a34.06,34.06,0,0,0,24,32.5V496a4,4,0,0,0,8,0V483.936c.662.039,1.328.064,2,.064h70v12a4,4,0,0,0,8,0V484h60a12.013,12.013,0,0,0,12-12V440a12.013,12.013,0,0,0-12-12h-2.45l.078-.235a11.072,11.072,0,0,0-6.639-13.916l-4.251-1.594a4,4,0,0,0-4.86,1.729L165.7,428H132V376.65L154.883,308h57.2a26.094,26.094,0,0,1,23.53,14.941l40.77,86.76a4,4,0,0,0,6.254,1.309L322.6,376.041l21.735,25.964-38.127,38.126a40.519,40.519,0,0,1-65.995-12.923L220,379.192V352a4,4,0,0,0-8,0V496a4,4,0,0,0,8,0V399.808l12.843,30.5a48.521,48.521,0,0,0,79.026,15.477l58.379-58.38L397.1,376.672A23.62,23.62,0,0,0,412,354.65V352A4,4,0,0,0,408,348ZM112,245.96a16.019,16.019,0,0,1,16-16h35.95v8.77a11.232,11.232,0,0,1-11.22,11.22c-.184,0-.376-.009-.542-.015a11.368,11.368,0,0,1-4.95-1.413l-13.36-7.5a4,4,0,0,0-5.958,3.488v1.53a19.751,19.751,0,0,1-3.6,11.414,14.156,14.156,0,0,0-3.583-1.235,14.754,14.754,0,0,0-2.718-.259,13.918,13.918,0,0,0-6.02,1.361Zm0,24.007v-.009a6.028,6.028,0,0,1,6.02-6,6.554,6.554,0,0,1,1.188.111,5.9,5.9,0,0,1,3,1.6,4,4,0,0,0,2.817,1.161h.02a4,4,0,0,0,2.825-1.188,27.7,27.7,0,0,0,7.6-14.554l7.871,4.418a19.4,19.4,0,0,0,4.663,1.84V282a6.006,6.006,0,0,1-6,6,17.826,17.826,0,0,1-8.182-1.958,4,4,0,0,0-3.638,7.125c.594.3,1.2.574,1.82.83v9.354l-4,12-4-12V279.8a4,4,0,0,0-4.8-3.92,6.007,6.007,0,0,1-7.2-5.913ZM168,436a4,4,0,0,0,3.455-1.984l7.633-13.086,1.092.409a3.1,3.1,0,0,1,1.859,3.895l-1.834,5.5A4,4,0,0,0,184,436h8a4,4,0,0,1,4,4v32a4,4,0,0,1-4,4H156V436Zm-92-8V360a4,4,0,0,0-8,0v72a4,4,0,0,0,4,4h76v40H54a26.03,26.03,0,0,1-26-26V328a20.023,20.023,0,0,1,20-20h53.117L124,376.65V428Zm52-64.649L109.55,308h7.567l7.088,21.265a4,4,0,0,0,7.59,0L138.883,308h7.567Zm266.125,5.895-27.61,11.04a4.026,4.026,0,0,0-1.344.885l-15.154,15.155-21.392-25.554,12.934-11.315A13.923,13.923,0,0,1,350.75,356h53.193A15.649,15.649,0,0,1,394.125,369.246ZM113.7,395.622a4,4,0,0,1-5.319-1.925L89.447,353.3a4,4,0,0,1,.045-3.486l3.838-7.676H86.336a4,4,0,0,1-3.794-5.265l6.732-20.2a4,4,0,0,1,7.59,2.531l-4.978,14.933H99.8a4,4,0,0,1,3.577,5.788l-5.866,11.734L115.622,390.3A4,4,0,0,1,113.7,395.622Zm55.967-53.483H162.67l3.838,7.676a4,4,0,0,1,.045,3.486l-18.931,40.4a4,4,0,1,1-7.244-3.394l18.109-38.642-5.866-11.734a4,4,0,0,1,3.577-5.788h7.916l-4.978-14.933a4,4,0,0,1,7.59-2.531l6.732,20.2a4,4,0,0,1-3.794,5.265Z" style="fill:url(#linear-gradient)"/></g></svg>
-
+    <!-- About Section -->
+    <section class="relative py-20">
+      <!-- Making Polygon Shape in Background -->
+      <div
+        class="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20"
+        style="height: 80px; transform: translateZ(0);"
+      >
+        <svg
+          class="absolute bottom-0 overflow-hidden"
+          xmlns="http://www.w3.org/2000/svg"
+          preserveAspectRatio="none"
+          version="1.1"
+          viewBox="0 0 2560 100"
+          x="0"
+          y="0"
+        >
+          <polygon
+            class="text-white fill-current"
+            points="2560 0 2560 100 0 100"
+          ></polygon>
+        </svg>
+      </div>
+      <!-- Section Container -->
+      <div class="container mx-auto px-4">
+        <div class="items-center flex flex-wrap">
+          <div class="w-full md:w-4/12 ml-auto mr-auto px-4" data-aos="flip-right" data-aos-delay="1000"> 
+            <!-- Image -->
+            <img
+              alt="..."
+              class="max-w-full rounded-lg shadow-lg"
+              src="temp_crt_china.jpg"
+            />
+          </div>
+          <!-- Text Box Container-->
+          <div class="w-full md:w-5/12 ml-auto mr-auto px-4" data-aos="zoom-in-left">
+            <div class="md:pr-12">
+              <div class="text-pink-600 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-pink-300">
+                <!-- Icon -->
+                <i class="fas fa-rocket text-xl"></i>
               </div>
-            </li>
-
-            <li class="promo-item">
-              <div class="promo-card">
-
-                <div class="card-icon">
-                    <g clip-path="url(#A)" fill="#ff9d2d">
-                      <path
-                        d="M14.837 40.062c0 3.106 2.528 5.634 5.634 5.634s5.634-2.528 5.634-5.634a5.64 5.64 0 0 0-5.634-5.634c-3.106 0-5.634 2.527-5.634 5.634zm5.634-3.876a3.88 3.88 0 0 1 3.876 3.876 3.88 3.88 0 0 1-3.876 3.876 3.88 3.88 0 0 1-3.876-3.876 3.88 3.88 0 0 1 3.876-3.876zm4.22-20.523l-.2-9.292a1.6 1.6 0 0 0 1.089-1.514V1.599A1.6 1.6 0 0 0 23.981 0H16.96a1.6 1.6 0 0 0-1.599 1.599v3.259a1.6 1.6 0 0 0 1.09 1.514l-.201 9.292a10.3 10.3 0 0 1-2.194 6.117c-1.659 2.107-2.573 4.744-2.573 7.426v27.741A3.06 3.06 0 0 0 14.538 60h11.866a3.06 3.06 0 0 0 3.053-3.053v-27.74a12.06 12.06 0 0 0-2.573-7.426 10.3 10.3 0 0 1-2.194-6.117zM17.119 1.758h6.703v2.941h-6.703V1.758zm5.695 8.398h-4.687l.08-3.7h4.527l.08 3.7zM27.7 56.947a1.3 1.3 0 0 1-1.296 1.295H14.538c-.715 0-1.295-.581-1.295-1.295v-7.978H27.7v7.978zm0-25.703h-8.55a.88.88 0 0 0-.879.878.88.88 0 0 0 .879.879h8.55v14.21H13.242v-14.21h1.819a.88.88 0 0 0 .878-.879.88.88 0 0 0-.878-.878h-1.819v-2.037a10.29 10.29 0 0 1 2.196-6.338c1.602-2.034 2.514-4.579 2.57-7.167l.082-3.787h4.762l.081 3.787a12.08 12.08 0 0 0 2.57 7.167 10.29 10.29 0 0 1 2.196 6.338v2.037zm20.876-12.638c0-1.069-.567-2.026-1.438-2.519-.186-1.394-1.338-2.471-2.727-2.471a2.66 2.66 0 0 0-1.289.334 2.61 2.61 0 0 0-.274-.089c-.193-1.385-1.341-2.453-2.724-2.453-.896 0-1.721.456-2.23 1.188l-.226-.01c-1.262 0-2.34.894-2.658 2.119a2.8 2.8 0 0 0-1.113 1.131c-1.179.329-2.037 1.45-2.037 2.78.001.218.047.432.132.631l-.003.052v1.757a64.33 64.33 0 0 0 1.632 14.388l.141.613c1.294 5.63 1.871 9.946 1.871 13.995v4.586a.54.54 0 0 1-.038.201c-.004.008-.01.016-.013.024a.54.54 0 0 1-.196.23l-1.491.966c-.515.334-.822.899-.822 1.512v.625a1.71 1.71 0 0 0 .007.15c.002.026.005.051.008.077.001.007.001.014.002.022.002.015.005.028.008.043l.016.092a1.66 1.66 0 0 0 .034.133c.014.045.028.083.043.122.006.016.011.032.018.048a1.57 1.57 0 0 0 .055.119c.006.012.012.025.018.038a1.67 1.67 0 0 0 .07.119c.006.01.012.021.018.03.025.038.052.073.079.109.009.01.016.022.025.032.025.031.051.059.078.088.013.015.026.029.039.043a1.42 1.42 0 0 0 .07.065c.024.021.04.038.06.055s.037.028.055.042a1.37 1.37 0 0 0 .086.064c.015.01.031.019.046.028.03.019.059.039.091.056a2.17 2.17 0 0 0 .105.054c.023.011.045.022.066.031a1.83 1.83 0 0 0 .08.031 1.92 1.92 0 0 0 .088.031 1.73 1.73 0 0 0 .086.023c.029.008.059.016.085.021a1.58 1.58 0 0 0 .103.017 1.43 1.43 0 0 0 .076.011 1.94 1.94 0 0 0 .101.006 1.18 1.18 0 0 0 .08.003L45.561 60c.031-.001.058-.001.087-.003s.059-.003.088-.006a1.07 1.07 0 0 0 .087-.011c.034-.005.068-.01.098-.016h0c.035-.008.058-.013.078-.019.032-.008.065-.016.098-.027.02-.006.039-.013.059-.021a1.38 1.38 0 0 0 .103-.039c.015-.006.031-.013.045-.02s.026-.014.04-.021a2.01 2.01 0 0 0 .105-.054c.023-.013.046-.027.069-.042a1.93 1.93 0 0 0 .081-.054 1.46 1.46 0 0 0 .075-.056 2.01 2.01 0 0 0 .064-.053 1.78 1.78 0 0 0 .076-.069c.018-.017.035-.036.052-.054.024-.026.049-.052.071-.079.016-.019.031-.039.047-.059.021-.028.043-.054.062-.083s.033-.052.049-.079.031-.049.045-.074a1.77 1.77 0 0 0 .144-.342 1.62 1.62 0 0 0 .036-.14c.006-.029.011-.059.016-.089.002-.016.006-.031.008-.047l.003-.022.008-.075a1.68 1.68 0 0 0 .008-.15v-.624c0-.613-.307-1.178-.821-1.511l-.553-.358-.94-.609c-.035-.027-.083-.076-.132-.151a1.28 1.28 0 0 1-.047-.084c-.041-.081-.069-.163-.069-.22v-4.585c0-4.048.577-8.364 1.871-13.995l.141-.613a64.33 64.33 0 0 0 1.632-14.388V19.3c0-.018-.002-.035-.003-.052a1.63 1.63 0 0 0 .132-.626v-.016zm-14.012-1.108a.88.88 0 0 0 .792-.617c.108-.352.366-.618.688-.712a.88.88 0 0 0 .63-.79c.035-.58.471-1.033.993-1.033a.9.9 0 0 1 .35.071.88.88 0 0 0 1.174-.527c.145-.425.528-.722.932-.722.549 0 .995.498.995 1.109a1.23 1.23 0 0 1-.021.226.88.88 0 0 0 .968 1.036c.222-.026.438.029.625.159a.88.88 0 0 0 1.095-.073c.178-.163.395-.249.626-.249.549 0 .996.498.996 1.109a1.16 1.16 0 0 1-.005.114.88.88 0 0 0 .65.93c.219.058.408.198.544.386h-12.76c.173-.239.432-.398.728-.414h0zm10.634 39.787l.388.251c.006.004.011.01.015.016l.005.021v.619l-.001.013c-.003.011-.006.016-.009.02l-.052.017H34.892l-.02-.001-.022-.006c-.011-.008-.016-.017-.019-.031l-.001-.63c0-.015.007-.029.02-.037l1.491-.967a2.52 2.52 0 0 0 .135-.095l.023-.018a2.11 2.11 0 0 0 .111-.092c.097-.087.176-.168.248-.254h6.737a3.35 3.35 0 0 0 .102.118l.034.037c.026.026.051.052.078.077.013.013.027.025.041.038a1.97 1.97 0 0 0 .081.07l.039.032a1.81 1.81 0 0 0 .114.081l1.113.722zm1.491-36.227l-.018 1.463h-7.669a.88.88 0 0 0-.879.879.88.88 0 0 0 .879.879h7.603a62.7 62.7 0 0 1-1.502 10.774l-.141.613c-1.325 5.765-1.915 10.202-1.915 14.388v4.299H37.39v-4.299c0-4.187-.591-8.624-1.915-14.388l-.141-.613a62.6 62.6 0 0 1-1.503-10.774h1.08a.88.88 0 0 0 .879-.879.88.88 0 0 0-.879-.879h-1.146l-.019-1.463v-1.387h12.942v1.387z" />
-                    </g>
-                    <defs>
-                      <clipPath id="A">
-                        <path fill="#fff" d="M0 0h60v60H0z" />
-                      </clipPath>
-                    </defs>
-                  </svg>
-                </div>
-
-                <h3 class="h3 card-title">Time</h3>
-                <br><hr><br>
-                <p class="card-text">
-                 we complete our job as we schedule
-                </p>
-
-                <img <!--  icon666.com - MILLIONS vector ICONS FREE --><svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="m512 213.539062v84.921876c0 8.503906-6.902344 15.410156-15.410156 15.410156h-55.074219c-3.484375 11.1875-7.972656 22.015625-13.417969 32.390625l38.9375 38.945312c6.019532 6.011719 6.019532 15.769531 0 21.789063l-60.039062 60.039062c-6.019532 6.019532-15.777344 6.019532-21.789063 0l-38.945312-38.9375c-10.375 5.445313-21.203125 9.933594-32.390625 13.417969v55.074219c0 8.507812-6.90625 15.410156-15.410156 15.410156h-84.921876c-8.503906 0-15.410156-6.902344-15.410156-15.410156v-55.074219c-11.1875-3.484375-22.015625-7.972656-32.390625-13.417969l-38.945312 38.9375c-6.011719 6.019532-15.769531 6.019532-21.789063 0l-60.039062-60.039062c-6.019532-6.019532-6.019532-15.777344 0-21.789063l38.9375-38.945312c-5.445313-10.375-9.933594-21.203125-13.417969-32.390625h-55.074219c-8.507812 0-15.410156-6.90625-15.410156-15.410156v-84.921876c0-8.503906 6.902344-15.410156 15.410156-15.410156h55.074219c3.484375-11.1875 7.972656-22.015625 13.417969-32.390625l-38.9375-38.945312c-6.019532-6.011719-6.019532-15.769531 0-21.789063l60.039062-60.039062c6.019532-6.019532 15.777344-6.019532 21.789063 0l38.945312 38.9375c10.375-5.445313 21.203125-9.933594 32.390625-13.417969v-55.074219c0-8.507812 6.90625-15.410156 15.410156-15.410156h84.921876c8.503906 0 15.410156 6.902344 15.410156 15.410156v55.074219c11.1875 3.484375 22.015625 7.972656 32.390625 13.417969l38.945312-38.9375c6.011719-6.019532 15.769531-6.019532 21.789063 0l60.039062 60.039062c6.019532 6.019532 6.019532 15.777344 0 21.789063l-38.9375 38.945312c5.445313 10.375 9.933594 21.203125 13.417969 32.390625h55.074219c8.507812 0 15.410156 6.90625 15.410156 15.410156zm0 0" fill="#6aa9ff"/><path d="m512 213.539062v84.921876c0 8.503906-6.902344 15.410156-15.410156 15.410156h-55.074219c-3.484375 11.1875-7.972656 22.015625-13.417969 32.390625l38.9375 38.945312c6.019532 6.011719 6.019532 15.769531 0 21.789063l-60.039062 60.039062c-6.019532 6.019532-15.777344 6.019532-21.789063 0l-38.945312-38.9375c-10.375 5.445313-21.203125 9.933594-32.390625 13.417969v55.074219c0 8.507812-6.90625 15.410156-15.410156 15.410156h-42.460938v-512h42.460938c8.503906 0 15.410156 6.902344 15.410156 15.410156v55.074219c11.1875 3.484375 22.015625 7.972656 32.390625 13.417969l38.945312-38.9375c6.011719-6.019532 15.769531-6.019532 21.789063 0l60.039062 60.039062c6.019532 6.019532 6.019532 15.777344 0 21.789063l-38.9375 38.945312c5.445313 10.375 9.933594 21.203125 13.417969 32.390625h55.074219c8.507812 0 15.410156 6.90625 15.410156 15.410156zm0 0" fill="#2682ff"/><path d="m256 120.394531c-74.773438 0-135.605469 60.832031-135.605469 135.605469s60.832031 135.605469 135.605469 135.605469 135.605469-60.832031 135.605469-135.605469-60.832031-135.605469-135.605469-135.605469zm0 0" fill="#edf0f5"/><path d="m391.605469 256c0 74.777344-60.828125 135.605469-135.605469 135.605469v-271.210938c74.777344 0 135.605469 60.828125 135.605469 135.605469zm0 0" fill="#d8dceb"/><path d="m347.546875 271.410156h12.101563c-6.71875 45.46875-42.769532 81.519532-88.238282 88.238282v-12.101563c0-8.519531-6.902344-15.410156-15.410156-15.410156s-15.410156 6.890625-15.410156 15.410156v12.101563c-45.46875-6.71875-81.519532-42.769532-88.238282-88.238282h12.101563c8.519531 0 15.410156-6.902344 15.410156-15.410156s-6.890625-15.410156-15.410156-15.410156h-12.101563c6.71875-45.46875 42.769532-81.519532 88.238282-88.238282v12.101563c0 8.519531 6.902344 15.410156 15.410156 15.410156s15.410156-6.890625 15.410156-15.410156v-12.101563c45.46875 6.71875 81.519532 42.769532 88.238282 88.238282h-12.101563c-8.519531 0-15.410156 6.902344-15.410156 15.410156s6.890625 15.410156 15.410156 15.410156zm0 0" fill="#8cbcff"/><path d="m347.546875 271.410156h12.101563c-6.71875 45.46875-42.769532 81.519532-88.238282 88.238282v-12.101563c0-8.519531-6.902344-15.410156-15.410156-15.410156v-152.273438c8.507812 0 15.410156-6.890625 15.410156-15.410156v-12.101563c45.46875 6.71875 81.519532 42.769532 88.238282 88.238282h-12.101563c-8.519531 0-15.410156 6.902344-15.410156 15.410156s6.890625 15.410156 15.410156 15.410156zm0 0" fill="#4895ff"/><path d="m319.914062 212.476562c-4.792968-7.035156-14.378906-8.855468-21.410156-4.066406l-42.378906 28.859375-25.9375-18.179687c-6.96875-4.886719-16.578125-3.195313-21.464844 3.773437-4.882812 6.96875-3.191406 16.578125 3.773438 21.460938l34.660156 24.292969c5.242188 3.675781 12.21875 3.726562 17.515625.117187l51.175781-34.847656c7.035156-4.789063 8.855469-14.375 4.066406-21.410157zm0 0" fill="#edf0f5"/><path d="m315.851562 233.890625-51.179687 34.847656c-2.621094 1.789063-5.652344 2.671875-8.671875 2.671875v-34.21875l.125.082032 42.375-28.859376c7.039062-4.789062 16.621094-2.96875 21.410156 4.058594 4.796875 7.035156 2.96875 16.621094-4.058594 21.417969zm0 0" fill="#d8dceb"/> </svg>
+              <!-- Text Box -->
+              <h3 class="text-3xl font-semibold">For Different Brand Tvs</h3>
+              <p class="mt-4 text-lg leading-relaxed text-gray-600">
+                we have lots original and tested -
+              </p>
+              <!-- List -->
+              <ul class="list-none mt-6">
+                <li class="py-2">
+                  <div class="flex items-center">
+                    <div>
+                      <span class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-pink-600 bg-pink-200 mr-3">
+                        <!-- Icon -->
+                        <i class="fas fa-tv text-xl"></i>
+                      </span>
+                    </div>
+                    <div>
+                      <h4 class="text-gray-600">
+                       power supply
+                      </h4>
+                    </div>
+                  </div>
+                </li>
+                <li class="py-2">
+                  <div class="flex items-center">
+                    <div>
+                      <span class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-pink-600 bg-pink-200 mr-3">
+                        <!-- Icon -->
+                        <i class="fas fa-tv text-xl"></i>
+                      </span>
+                    </div>
+                    <div>
+                      <h4 class="text-gray-600">main board</h4>
+                    </div>
+                  </div>
+                </li>
+                <li class="py-2">
+                  <div class="flex items-center">
+                    <div>
+                      <span class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-pink-600 bg-pink-200 mr-3">
+                        <!-- Icon -->
+                        <i class="fas fa-tv text-xl"></i>
+                      </span>
+                    </div>
+                    <div>
+                      <h4 class="text-gray-600">T-con </h4>
+                    </div>
                   
-
-              </div>
-            </li>
-
-            <li class="promo-item">
-              <div class="promo-card">
-
-                <div class="card-icon">
-                    <g clip-path="url(#A)" fill="#ff9d2d">
-                      <path
-                        d="M30.057 32.375c-5.536 0-10.04 4.504-10.04 10.04s4.504 10.04 10.04 10.04 10.04-4.504 10.04-10.04-4.504-10.04-10.04-10.04h0zm0 18.322c-4.567 0-8.282-3.715-8.282-8.282s3.715-8.282 8.282-8.282 8.282 3.715 8.282 8.282-3.715 8.282-8.282 8.282zM51.089 19.66h-.069l2.006-9.708c.148-.715.001-1.451-.402-2.018a2.29 2.29 0 0 0-1.582-.957l-3.385-.448a2.37 2.37 0 0 0-.754.022l.03-.252c.086-.732-.125-1.462-.578-2.002-.425-.506-1.018-.806-1.671-.843l-2.506-.143c.082-.712-.109-1.428-.532-1.975a2.39 2.39 0 0 0-1.633-.929L36.522.015a2.42 2.42 0 0 0-1.806.541 2.77 2.77 0 0 0-.993 1.879l-.318 3.293a2.49 2.49 0 0 0-.285-.351 2.4 2.4 0 0 0-1.728-.736h-3.467a2.37 2.37 0 0 0-1.285.379l-.249-2.586a2.77 2.77 0 0 0-.993-1.879 2.42 2.42 0 0 0-1.806-.541L20.1.407a2.39 2.39 0 0 0-1.633.929c-.423.547-.614 1.263-.532 1.975l-2.506.143c-.652.037-1.246.336-1.671.843-.454.54-.664 1.27-.578 2.002l.03.253a2.37 2.37 0 0 0-.754-.023l-3.385.448a2.29 2.29 0 0 0-1.582.957c-.403.567-.55 1.303-.402 2.018l2.006 9.708h-.069a1.99 1.99 0 0 0-1.965 2.332l6.267 36.353A1.99 1.99 0 0 0 15.292 60h29.53a1.99 1.99 0 0 0 1.965-1.655l6.267-36.353a1.99 1.99 0 0 0-1.965-2.332h0zM46.648 8.735c.167-.311.481-.504.78-.463l3.385.448c.196.026.314.141.379.233.121.171.163.406.114.644l-2.08 10.063h-1.285l.855-6.758a2.44 2.44 0 0 0-.535-1.872 2.28 2.28 0 0 0-1.652-.821l-.136-.007.173-1.467zm-1.199 3.175l1.072.055c.2.011.325.111.394.194.115.137.164.323.139.523l-.884 6.979h-4.106l.475-2.775a2.35 2.35 0 0 0-.32-1.641l.209-2.71a.83.83 0 0 1 .366-.627c.12-.079.261-.122.407-.114l2.248.115h.001zm-4.364-6.898h.035 0l3.465.197a.59.59 0 0 1 .425.218c.143.171.208.414.178.667l-.27 2.295-.203 1.723-1.426-.073c-1.337-.069-2.509.99-2.615 2.36l-.134 1.741-.822-.129.564-8.13c.033-.482.399-.872.803-.869h0zm-.28 11.577l-.541 3.161a1.99 1.99 0 0 0-1.268 1.197 9.56 9.56 0 0 1-3.458 4.419l-.516.335 1.413-9.801c.023-.163.109-.307.242-.405s.295-.138.458-.112l1.499.236 1.663.262a.61.61 0 0 1 .402.248c.096.134.134.297.106.46h0zm-7.294 6.349l1.962-20.334c.027-.275.154-.523.351-.683.106-.086.281-.184.503-.159l3.493.391a.64.64 0 0 1 .437.257c.15.194.213.46.174.73l-.031.211-.043.015-.055.019-.163.062-.041.018a2.48 2.48 0 0 0-.301.159l-.026.016-.176.123-.105.083-.019.016-.146.135-.035.036-.071.076-.074.087-.066.083-.048.065-.06.087-.064.103-.037.065-.063.12-.027.059-.055.126-.021.052-.056.162-.012.041-.041.152-.008.033-.034.181-.006.042-.021.192-.553 7.977-.566-.089a2.35 2.35 0 0 0-2.714 2.002l-1.209 8.388.025-1.099zM27.458 6.605c.091-.094.247-.206.469-.206h3.467c.221 0 .378.113.47.207a.91.91 0 0 1 .246.656l-.346 15.202-.343-6.567a2.67 2.67 0 0 0-.807-1.788c-.502-.485-1.151-.733-1.829-.697l-1.411.075-.03-1.154-.13-5.074c-.006-.251.082-.489.243-.654zm1.42 8.562c.248-.011.429.123.514.206.164.158.261.377.273.616l.579 11.097-.188.003a9.52 9.52 0 0 1-4.229-.982L24.83 16.2c-.024-.239.043-.47.183-.634.08-.093.22-.207.432-.218l3.433-.181zM19.859 2.41a.64.64 0 0 1 .438-.257l3.492-.391c.223-.025.396.073.503.159a1 1 0 0 1 .35.683l.946 9.805.03 1.171-.265.014c-.651.035-1.245.329-1.674.829a2.61 2.61 0 0 0-.598 1.954l.483 4.796-1.09-2.613-.888-12.8-.021-.191-.006-.042-.034-.181-.007-.031-.041-.157-.011-.037-.058-.166-.017-.044-.061-.141-.012-.027-.078-.149-.027-.048-.087-.139-.026-.037-.078-.107-.033-.043-.103-.121-.037-.039-.095-.095-.029-.029-.123-.107-.039-.031-.134-.1-.017-.011-.136-.086-.029-.017-.156-.083-.018-.009-.168-.073-.182-.062-.037-.216c-.039-.27.024-.536.174-.73zm-4.754 3.017a.59.59 0 0 1 .425-.217l3.467-.198h.002c.425-.012.801.379.834.869l.528 7.616-.436-1.046a2.67 2.67 0 0 0-1.362-1.412 2.59 2.59 0 0 0-.231-.091l-.24-.069c-.007-.001-.015-.004-.022-.005a2.42 2.42 0 0 0-.223-.039l-.028-.004-.22-.016c-.011 0-.021-.001-.031-.001s-.025-.001-.037-.001l-.116.005-.099.005-.148.02-.093.014-.16.039-.076.019-.232.083-1.052.44-.159-1.349-.47-3.995c-.029-.253.036-.496.179-.667zm-.991 8.519l.52-.218.523-.218h.001l2.128-.89a.7.7 0 0 1 .553.02.92.92 0 0 1 .465.488l4.377 10.488a9.55 9.55 0 0 1-1.561-2.67c-.3-.781-1.031-1.286-1.864-1.286h-3.199l-2.236-4.705c-.103-.217-.118-.457-.041-.659a.65.65 0 0 1 .073-.14c.055-.08.138-.159.26-.211zM8.81 9.596c-.049-.239-.008-.473.113-.644.065-.092.184-.206.38-.232l3.385-.448c.297-.039.612.152.78.463l.186 1.578.215 1.83-.433.181a2.35 2.35 0 0 0-1.297 1.344c-.248.649-.214 1.393.095 2.041l1.877 3.951h-3.222L8.81 9.596zm42.512 12.098l-2.776 16.102h-5.748a.88.88 0 0 0-.879.879.88.88 0 0 0 .879.879h5.445l-.914 5.302h-4.415a.88.88 0 0 0-.879.879.88.88 0 0 0 .879.879h4.112l-1.971 11.433c-.02.113-.118.196-.233.196h-29.53c-.115 0-.213-.082-.233-.196l-1.971-11.433H17.2a.88.88 0 0 0 .879-.879.88.88 0 0 0-.879-.879h-4.415l-.914-5.302h5.472a.88.88 0 0 0 .879-.879.88.88 0 0 0-.879-.879h-5.775L8.793 21.694c-.016-.09.02-.154.052-.192a.23.23 0 0 1 .181-.084h10.23a.24.24 0 0 1 .223.158 11.31 11.31 0 0 0 4.091 5.229c1.908 1.336 4.152 2.042 6.488 2.042l.364-.007.173-.007.152-.009a11.41 11.41 0 0 0 1.582-.206 11.25 11.25 0 0 0 4.218-1.813 11.31 11.31 0 0 0 4.091-5.229.24.24 0 0 1 .222-.158h10.23a.23.23 0 0 1 .232.277h0z" />
-                    </g>
-                    <defs>
-                      <clipPath id="A">
-                        <path fill="#fff" d="M0 0h60v60H0z" />
-                      </clipPath>
-                    </defs>
-                  </svg>
-                </div>
-
-                <h3 class="h3 card-title">warranty</h3>
-                <br><hr><br>
-
-                <p class="card-text">
-we give 1 year warranty for our Customers                </p>
-
-                <img <!-- icon666.com - MILLIONS vector ICONS FREE --><svg viewBox="0 0 192 192" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><linearGradient id="New_Gradient_Swatch_1" gradientUnits="userSpaceOnUse" x1="51.497" x2="140.503" y1="120.764" y2="31.757"><stop offset="0" stop-color="#34cdfa"/><stop offset="1" stop-color="#e8d9f1"/></linearGradient><g id="_21-reliable" data-name="21-reliable"><g id="Flat"><path d="m168 16c-21.482 0-58.006-5.32-66.343-13.657a8 8 0 0 0 -11.314 0c-8.337 8.337-44.861 13.657-66.343 13.657a8 8 0 0 0 -8 8v88c0 10.776 12.25 20.08 33.9 35.6 15.174 10.868 38.1 27.3 38.1 36.4a8 8 0 0 0 16 0c0-9.1 22.926-25.532 38.1-36.4 21.65-15.52 33.9-24.824 33.9-35.6v-88a8 8 0 0 0 -8-8z" fill="#e6f9fe"/><path d="m81.9 139.6c-21.65-15.52-33.9-24.824-33.9-35.6v-88a8.052 8.052 0 0 1 .161-1.6 210.6 210.6 0 0 1 -24.161 1.6 8 8 0 0 0 -8 8v88c0 10.776 12.25 20.08 33.9 35.6 15.174 10.868 38.1 27.3 38.1 36.4a8 8 0 0 0 16 0c0-4.265 5.031-10.136 11.939-16.292-7.263-8.922-22.78-20.046-34.039-28.108z" fill="#ccf2fe"/><path d="m144.836 38.611c-5.871-.617-11.609-1.4-17.054-2.343-11.821-2.039-21.191-4.574-28.645-7.751a8 8 0 0 0 -6.274 0c-7.454 3.177-16.824 5.712-28.644 7.751-5.446.938-11.184 1.726-17.055 2.343a8 8 0 0 0 -7.164 7.956v59.386a8 8 0 0 0 2.6 5.9c4.942 4.523 14.384 11.29 21.283 16.234 9.249 6.628 18.814 13.481 26.833 20.536a8 8 0 0 0 10.568 0c8.019-7.055 17.584-13.908 26.838-20.54 6.894-4.94 16.336-11.707 21.278-16.23a8 8 0 0 0 2.6-5.9v-59.386a8 8 0 0 0 -7.164-7.956z" fill="url(#New_Gradient_Swatch_1)"/><path d="m88 112a7.962 7.962 0 0 1 -4.432-1.344l-24-16 8.875-13.312 17.9 11.931 27.41-34.275 12.494 10-32 40a7.991 7.991 0 0 1 -6.247 3z" fill="#fff"/></g></g></svg>
-
-
-              </div>
-            </li>
-
-            <li class="promo-item">
-              <div class="promo-card">
-
-                <div class="card-icon">
-                    <g clip-path="url(#A)">
-                      <path
-                        d="M56.993 41.631v-2.214c0-.133-.01-.265-.023-.396.218-.131.421-.276.605-.435.815-.705 1.245-1.636 1.245-2.691 0-.903-.333-1.764-.907-2.429.451-.536.707-1.218.694-1.928a2.97 2.97 0 0 0-1.991-2.734 3.74 3.74 0 0 0 .368-1.622v-.645A3.25 3.25 0 0 0 60 23.301c0-.248-.052-6.13-4.59-11.715-2.306-2.839-5.359-5.087-9.075-6.682C41.841 2.974 36.345 1.994 30 1.992c-7.992.003-14.592 1.548-19.616 4.592a.88.88 0 1 0 .912 1.506C16.041 5.215 22.334 3.755 30 3.753c6.105.002 11.367.933 15.641 2.769 3.451 1.482 6.278 3.559 8.403 6.174 4.148 5.106 4.196 10.383 4.196 10.605 0 .819-.666 1.484-1.484 1.484H3.245c-.818 0-1.484-.666-1.484-1.484 0-.221.029-2.241 1.035-5.017 1.101-3.038 2.892-5.68 5.323-7.852a.88.88 0 1 0-1.173-1.313C.079 15.255 0 22.975 0 23.301a3.25 3.25 0 0 0 3.017 3.236v.645c0 .585.135 1.14.374 1.635a3.06 3.06 0 0 0-1.153.735 2.9 2.9 0 0 0-.845 2.099c.012.679.255 1.314.67 1.817-.574.665-.906 1.526-.906 2.428-.001 1.056.429 1.986 1.245 2.691.195.169.412.321.646.458a3.74 3.74 0 0 0-.021.373v2.212A3.25 3.25 0 0 0 0 44.866a13.19 13.19 0 0 0 13.172 13.172h33.656A13.19 13.19 0 0 0 60 44.866a3.25 3.25 0 0 0-3.007-3.235h0zm-.57-4.376c-.809.7-2.293.991-3.873.76-1.118-.164-1.707-.475-2.33-.805l-.439-.227 2-2.035c.249-.254.597-.4.953-.4h2.864a2.96 2.96 0 0 0 .805-.111 1.96 1.96 0 0 1 .656 1.46c0 .536-.214.993-.636 1.358h0zM4.778 26.546h50.445v.636c0 .683-.344 1.288-.867 1.65-.015.011-.03.02-.045.03a1.97 1.97 0 0 1-.115.07l-.04.023a2.09 2.09 0 0 1-.153.074 1.95 1.95 0 0 1-.187.069c-.007.002-.014.004-.021.006-.051.016-.103.029-.155.04l-.049.01c-.045.008-.091.016-.137.021l-.052.006c-.062.006-.124.01-.187.01H6.785a2.01 2.01 0 0 1-2.008-2.008v-.636zm-1.283 4.239a1.28 1.28 0 0 1 .906-.384h.428a3.75 3.75 0 0 0 1.957.549h46.428a3.89 3.89 0 0 0 .233-.008c.025-.001.049-.004.073-.006a3.78 3.78 0 0 0 .162-.017l.079-.01c.069-.01.137-.021.204-.035.028-.006.056-.013.085-.019l.138-.034c.035-.009.07-.019.104-.029s.074-.023.11-.035l.105-.035c.06-.022.12-.046.178-.071.035-.015.07-.032.105-.048s.065-.031.098-.047l.102-.053c.038-.021.077-.043.114-.065.023-.013.046-.025.069-.039h.48a1.2 1.2 0 0 1 1.193 1.17c.009.45-.266.877-.699 1.087h0c-.176.086-.361.13-.548.13h-2.864c-.825 0-1.631.337-2.209.927l-3.568 3.632c-.85.866-2.199.983-3.184.317l-.064-.044a2.4 2.4 0 0 1-.162-.125l-4.623-3.961a3.1 3.1 0 0 0-2.015-.745H4.347a1.18 1.18 0 0 1-.523-.123h0a1.19 1.19 0 0 1-.669-1.047c-.006-.307.115-.602.341-.833h0zm-.577 5.112a1.96 1.96 0 0 1 .65-1.453 2.93 2.93 0 0 0 .779.105H36.91a1.34 1.34 0 0 1 .87.321l3.655 3.132a6.22 6.22 0 0 1-.229.004c-1.159 0-1.685-.315-2.352-.715-.755-.452-1.611-.965-3.257-.965s-2.501.513-3.257.965c-.666.399-1.193.715-2.352.715s-1.686-.315-2.352-.715c-.755-.452-1.611-.965-3.257-.965s-2.502.513-3.257.965c-.667.399-1.193.715-2.352.715s-1.686-.315-2.352-.715c-.755-.452-1.611-.965-3.257-.965-1.739 0-2.587.45-3.407.884-.623.33-1.211.641-2.329.805-1.58.231-3.063-.06-3.872-.759a1.73 1.73 0 0 1-.635-1.359h0zm43.91 20.382H13.172c-6.292 0-11.412-5.12-11.412-11.412 0-.818.666-1.484 1.484-1.484h39.461a.88.88 0 1 0 0-1.761H4.788v-1.928c.5.104 1.033.159 1.587.159.426 0 .863-.032 1.306-.097 1.419-.208 2.205-.624 2.898-.991.716-.38 1.282-.679 2.583-.679 1.159 0 1.686.315 2.352.715.755.452 1.611.965 3.257.965s2.501-.513 3.256-.965c.667-.399 1.193-.715 2.352-.715s1.686.315 2.352.715c.755.452 1.611.965 3.257.965s2.501-.513 3.256-.965c.666-.399 1.193-.715 2.352-.715s1.686.315 2.352.715c.755.452 1.611.965 3.257.965.784 0 1.441-.114 2.073-.358.596.295 1.244.442 1.893.442 1.108 0 2.214-.428 3.042-1.27l.246-.25c.331.117.62.268.938.437.694.367 1.479.783 2.898.991.443.065.881.097 1.306.097.569 0 1.117-.058 1.63-.169v1.937h-8.431a.88.88 0 1 0 0 1.761h9.954c.819 0 1.484.666 1.484 1.484a11.43 11.43 0 0 1-11.412 11.412h0z"
-                        fill="#ff9d2d" />
-                    </g>
-                    <defs>
-                      <clipPath id="A">
-                        <path fill="#fff" d="M0 0h60v60H0z" />
-                      </clipPath>
-                    </defs>
-                  </svg>
-                </div>
-
-                <h3 class="h3 card-title">availability</h3>
-
-                <p class="card-text">
-we are available 12/7  
-                    <br><hr><br>
-                <!-- icon666.com - MILLIONS vector ICONS FREE --><svg id="Capa_1" enable-background="new 0 0 512 512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><g><g><g><path d="m15 256c0 133.101 107.899 241 241 241l10-15v-452l-10-15c-133.101 0-241 107.899-241 241z" fill="#e4eef7"/><path d="m256 15v482c133.101 0 241-107.899 241-241s-107.899-241-241-241z" fill="#d5e0f1"/></g><g><path d="m0 256c0 141.493 114.507 256 256 256l10-15-10-15c-124.912 0-226-101.088-226-226s101.088-226 226-226l10-15-10-15c-141.493 0-256 114.507-256 256z" fill="#c7d2ed"/><g fill="#b3c2e6"><path d="m351.103 494.127c7.715-3.017 11.524-11.717 8.507-19.433-3.017-7.715-11.717-11.524-19.433-8.507-26.832 10.493-55.154 15.813-84.177 15.813v30c32.777 0 64.774-6.013 95.103-17.873z"/><path d="m463.7 429.566h-19.502c43.461-46.973 67.802-108.401 67.802-173.566 0-141.493-114.507-256-256-256v30c124.912 0 226 101.088 226 226 0 58.098-21.91 112.84-61 154.467v-26.301c0-8.284-6.716-15-15-15s-15 6.716-15 15v60.4c0 8.624 7.406 15.681 16.207 15h56.493c8.284 0 15-6.716 15-15s-6.716-15-15-15z"/></g></g><path d="m106 241h-30c-8.284 0-15 6.716-15 15s6.716 15 15 15h30c8.284 0 15-6.716 15-15s-6.716-15-15-15z" fill="#c7d2ed"/><g fill="#b3c2e6"><path d="m436 241h-30c-8.284 0-15 6.716-15 15s6.716 15 15 15h30c8.284 0 15-6.716 15-15s-6.716-15-15-15z"/><path d="m419.385 178.99c7.175-4.142 9.633-13.316 5.49-20.49-4.143-7.175-13.316-9.631-20.49-5.49l-25.98 15c-7.175 4.142-9.633 13.316-5.49 20.49 4.143 7.175 13.315 9.633 20.49 5.49z"/><path d="m353.5 87.125c-7.175-4.144-16.349-1.685-20.49 5.49l-15 25.981c-4.143 7.174-1.685 16.348 5.49 20.49 7.174 4.143 16.348 1.684 20.49-5.49l15-25.981c4.143-7.174 1.685-16.348-5.49-20.49z"/></g><g><path d="m241 76v30c0 8.284 6.716 15 15 15l10-30-10-30c-8.284 0-15 6.716-15 15z" fill="#c7d2ed"/><path d="m256 61v60c8.284 0 15-6.716 15-15v-30c0-8.284-6.716-15-15-15z" fill="#b3c2e6"/></g><path d="m193.99 118.596-15-25.981c-4.143-7.175-13.315-9.632-20.49-5.49s-9.633 13.316-5.49 20.49l15 25.981c4.143 7.175 13.315 9.633 20.49 5.49 7.175-4.142 9.633-13.315 5.49-20.49z" fill="#c7d2ed"/><path d="m133.596 168.01-25.98-15c-7.175-4.143-16.349-1.685-20.49 5.49-4.143 7.174-1.685 16.348 5.49 20.49l25.98 15c7.174 4.143 16.348 1.684 20.49-5.49 4.143-7.174 1.685-16.348-5.49-20.49z" fill="#c7d2ed"/><g><path d="m241 166v65.72l-38.237-19.134c-7.409-3.708-16.419-.706-20.127 6.701-3.707 7.409-.707 16.42 6.701 20.127l59.95 30c2.195 1.098 4.482 1.598 6.713 1.594l10-15.008v-89.229l-10-15.771c-8.284 0-15 6.716-15 15z" fill="#555578"/><path d="m256 151v120.008c7.846-.017 15-6.302 15-15.008v-90c0-8.284-6.716-15-15-15z" fill="#3b385c"/></g></g><g><path d="m211.954 301c-8.284 0-15 6.716-15 15v.1c0 8.216-6.685 14.9-14.9 14.9-8.284 0-15 6.716-15 15s6.716 15 15 15c5.221 0 10.235-.896 14.9-2.542v62.492c0 8.284 6.716 15 15 15s15-6.716 15-15v-104.95c0-8.284-6.716-15-15-15z" fill="#ff667a"/><path d="m332.104 405.95h-27.614l6.472-3.23c21.677-10.82 35.143-32.592 35.143-56.819 0-24.813-20.187-45-45.1-45-24.813 0-45 20.187-45 45 0 8.284 6.716 15 15 15s15-6.716 15-15c0-8.271 6.729-15 15.1-15 8.271 0 15 6.729 15 15 0 12.782-7.104 24.269-18.541 29.978l-33.258 16.602c-5.119 2.556-8.338 7.8-8.301 13.521l.1 15.05c.055 8.245 6.755 14.9 15 14.9h61c8.284 0 15-6.716 15-15s-6.717-15.002-15.001-15.002z" fill="#ff4471"/></g></g></svg>
-                
-
-              </div>
-            </li>
-
-            <li class="promo-item">
-              <div class="promo-card">
-
-                <div class="card-icon">
-                    <g clip-path="url(#A)">
-                      <path
-                        d="M57.492 40.5h-9.248l1.652-.602c3.539-1.415 5.333-3.077 5.333-4.942 0-2.867-2.322-3.83-4.371-4.679-.878-.364-1.785-.741-2.529-1.252a.88.88 0 0 0-1.222.226.88.88 0 0 0 .226 1.222c.895.616 1.89 1.029 2.851 1.427 2.099.87 3.287 1.441 3.287 3.055 0 1.029-1.541 2.236-4.228 3.31-3.219 1.287-6.956 1.984-8.485 2.234H37.88c1.972-1.538 3.369-3.644 4.263-6.432 1.088-3.393 2.64-5.885 5.033-8.08.664-.609.959-1.469.856-2.286l5.013-3.729c.136-.101.324-.105.467-.009 1.086.729 2.203.929 3.23.577.81-.277 1.444-.858 1.787-1.635.356-.807.352-1.749-.011-2.585-.476-1.096-1.488-1.842-2.643-1.976.218-1.142-.191-2.332-1.094-3.114-.689-.597-1.587-.883-2.463-.785a2.99 2.99 0 0 0-2.095 1.216c-.643.874-.787 1.999-.417 3.254.049.165-.011.343-.147.442l-5.06 3.667c-.748-.343-1.657-.319-2.437.132-2.811 1.625-5.653 2.359-9.216 2.382-3.06.019-5.576.783-7.691 2.337-2.361 1.733-3.944 4.235-4.456 7.043-.516 2.828.112 5.627 1.767 7.882.462.629.995 1.197 1.585 1.698H13.017C6.254 39.138 2.966 35.766 2.966 30.192c0-4.24 1.895-8.611 5.199-11.992 3.571-3.654 8.341-5.667 13.43-5.667 5.83 0 11.891 2.127 16.629 5.835a.88.88 0 0 0 1.234-.151.88.88 0 0 0-.15-1.234c-5.041-3.945-11.497-6.209-17.712-6.209-5.566 0-10.782 2.201-14.687 6.196-3.622 3.706-5.7 8.525-5.7 13.22 0 4.76 2.103 8.21 6.259 10.308H2.509A2.51 2.51 0 0 0 0 43.009c0 1.383 1.125 2.509 2.509 2.509h3.187a.12.12 0 0 1 .112.075l.558 1.366a4.26 4.26 0 0 0 3.957 2.658h39.354a4.26 4.26 0 0 0 3.957-2.658l.558-1.365c.019-.046.063-.076.112-.076h3.187c1.383 0 2.508-1.126 2.508-2.509a2.51 2.51 0 0 0-2.508-2.509h0zm-6.801-23.718a2.17 2.17 0 0 0 .799-2.363c-.146-.493-.239-1.19.147-1.714a1.23 1.23 0 0 1 .874-.51c.391-.043.798.09 1.117.367a1.52 1.52 0 0 1 .475 1.623c-.138.44-.056.925.221 1.299s.711.598 1.172.598h0a1.52 1.52 0 0 1 1.407.94c.168.387.174.816.015 1.176-.101.228-.313.531-.749.681-.615.211-1.253-.087-1.68-.373a2.17 2.17 0 0 0-2.495.056l-4.752 3.535-1.35-1.839 4.798-3.476zm-26.71 20.98c-1.367-1.862-1.884-4.179-1.455-6.526.432-2.365 1.77-4.476 3.767-5.942 1.806-1.327 3.986-1.979 6.662-1.996 3.886-.025 6.996-.832 10.085-2.618.34-.196.742-.167.998.054a.73.73 0 0 1 .108.116l2.01 2.738c.028.038.053.08.074.127.141.316.048.712-.243.979-2.629 2.412-4.331 5.138-5.517 8.838-.818 2.549-2.093 4.433-3.9 5.759-.674.495-1.408.902-2.184 1.21H27.48c-1.403-.583-2.61-1.527-3.499-2.738h0zm33.511 5.998H18.744a.88.88 0 0 0-.879.879.88.88 0 0 0 .879.879h33.581l-.317.776a2.51 2.51 0 0 1-2.33 1.565H10.323a2.51 2.51 0 0 1-2.33-1.565l-.317-.776h6.979a.88.88 0 0 0 .879-.879.88.88 0 0 0-.879-.879H2.509a.75.75 0 1 1 0-1.502h54.983a.75.75 0 1 1 0 1.502h0z"
-                        fill="#ff9d2d" />
-                    </g>
-                    <defs>
-                      <clipPath id="A">
-                        <path fill="#fff" d="M0 0h60v60H0z" />
-                      </clipPath>
-                    </defs>
-                  </svg>
-                </div>
-
-                <h3 class="h3 card-title">Addresability</h3>
-                <br><hr><br>
-                <p class="card-text">
-                    home to home service accros the whole addis abeba 
-                </p>
-
-                <!-- icon666.com - MILLIONS vector ICONS FREE --><svg   viewBox="-68 0 512 512.00087" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><linearGradient id="lg1"><stop offset=".0112" stop-color="#ffdc70"/><stop offset=".0871" stop-color="#f9c781"/><stop offset=".1723" stop-color="#f4b68f"/><stop offset=".236" stop-color="#f2b094"/><stop offset=".4494" stop-color="#a0aec1"/><stop offset=".6966" stop-color="#98a7ad"/><stop offset="1" stop-color="#497692"/></linearGradient><linearGradient id="linear0" gradientTransform="matrix(.867863 0 0 -.867863 -68.266521 517.246231)" gradientUnits="userSpaceOnUse" x1="420.9947" x2="148.436" xlink:href="#lg1" y1="469.7329" y2="197.1742"/><linearGradient id="linear1" gradientTransform="matrix(.867863 0 0 -.867863 -68.266521 517.246231)" gradientUnits="userSpaceOnUse" x1="393.5146" x2="63.2611" xlink:href="#lg1" y1="478.22" y2="147.9665"/><linearGradient id="linear2" gradientTransform="matrix(.867863 0 0 -.867863 -68.266521 517.246231)" gradientUnits="userSpaceOnUse" x1="426.8969" x2="-15.7081" xlink:href="#lg1" y1="491.9372" y2="49.3321"/><linearGradient id="linear3" gradientTransform="matrix(.867863 0 0 -.867863 -68.266521 517.246231)" gradientUnits="userSpaceOnUse" x1="357.7161" x2="-53.0925" xlink:href="#lg1" y1="511.2497" y2="100.4411"/><linearGradient id="linear4" gradientTransform="matrix(.867863 0 0 -.867863 -68.266521 517.246231)" gradientUnits="userSpaceOnUse" x1="391.9067" x2="-18.9018" xlink:href="#lg1" y1="506.1099" y2="95.3013"/><linearGradient id="linear6" gradientTransform="matrix(.867863 0 0 -.867863 -68.266521 517.246231)" gradientUnits="userSpaceOnUse" x1="426.0973" x2="15.2887" xlink:href="#lg1" y1="500.9701" y2="90.1616"/><linearGradient id="linear8" gradientTransform="matrix(.867863 0 0 -.867863 -68.266521 517.246231)" gradientUnits="userSpaceOnUse" x1="460.2879" x2="49.4793" xlink:href="#lg1" y1="495.8304" y2="85.0218"/><linearGradient id="linear9" gradientTransform="matrix(.867863 0 0 -.867863 -68.266521 517.246231)" gradientUnits="userSpaceOnUse" x1="366.2638" x2="-44.5448" xlink:href="#lg1" y1="509.9647" y2="99.1562"/><linearGradient id="linear10" gradientTransform="matrix(.867863 0 0 -.867863 -68.266521 517.246231)" gradientUnits="userSpaceOnUse" x1="520.1214" x2="109.3129" xlink:href="#lg1" y1="486.8358" y2="76.0272"/><linearGradient id="linear11" gradientTransform="matrix(.867863 0 0 -.867863 -68.266521 517.246231)" gradientUnits="userSpaceOnUse" x1="485.9308" x2="75.1223" xlink:href="#lg1" y1="491.9756" y2="81.167"/><linearGradient id="linear12" gradientTransform="matrix(.867863 0 0 -.867863 -68.266521 517.246231)" gradientUnits="userSpaceOnUse" x1="278.427" x2="-231.6391" xlink:href="#lg1" y1="529.7103" y2="19.6441"/><linearGradient id="linear13" gradientTransform="matrix(.867863 0 0 -.867863 -68.266521 517.246231)" gradientUnits="userSpaceOnUse" x1="233.9543" x2="-77.4791" xlink:href="#lg1" y1="510.2704" y2="198.8371"/><linearGradient id="linear14" gradientTransform="matrix(.867863 0 0 -.867863 -68.266521 517.246231)" gradientUnits="userSpaceOnUse" x1="617.0402" x2="286.4941" xlink:href="#lg1" y1="411.5498" y2="81.0038"/><linearGradient id="linear15" gradientTransform="matrix(.867863 0 0 -.867863 -68.266521 517.246231)" gradientUnits="userSpaceOnUse" x1="569.8089" x2="299.9376" xlink:href="#lg1" y1="349.7041" y2="79.8328"/><path d="m187.734375 0c-103.515625 0-187.734375 84.214844-187.734375 187.734375 0 138.472656 174.285156 314.347656 181.699219 321.765625 1.601562 1.601562 3.769531 2.5 6.035156 2.5s4.433594-.898438 6.03125-2.5c7.417969-7.417969 181.703125-183.292969 181.703125-321.765625 0-103.519531-84.21875-187.734375-187.734375-187.734375zm0 491.191406c-31.007813-32.601562-170.667969-185.984375-170.667969-303.457031 0-94.109375 76.558594-170.667969 170.667969-170.667969s170.667969 76.558594 170.667969 170.667969c-.003906 117.414063-139.675782 270.855469-170.667969 303.457031zm0 0" fill="url(#linear0)"/><path d="m341.332031 187.734375c0-84.691406-68.90625-153.601563-153.597656-153.601563-84.695313 0-153.601563 68.910157-153.601563 153.601563s68.90625 153.597656 153.601563 153.597656c84.691406 0 153.597656-68.90625 153.597656-153.597656zm-153.597656 136.53125c-75.285156 0-136.535156-61.25-136.535156-136.53125 0-75.285156 61.25-136.535156 136.535156-136.535156 75.28125 0 136.53125 61.25 136.53125 136.535156 0 75.28125-61.25 136.53125-136.53125 136.53125zm0 0" fill="url(#linear1)"/><path d="m290.132812 136.53125h-42.664062v-25.597656c0-4.71875-3.820312-8.535156-8.535156-8.535156h-102.398438c-4.71875 0-8.535156 3.816406-8.535156 8.535156v68.265625h-42.667969c-4.714843 0-8.53125 3.816406-8.53125 8.535156v59.730469c0 4.71875 3.816407 8.535156 8.53125 8.535156h204.800781c4.71875 0 8.535157-3.816406 8.535157-8.535156v-102.398438c0-4.714844-3.816407-8.535156-8.535157-8.535156zm-162.132812 102.402344h-34.132812v-42.667969h34.132812zm102.402344-93.867188v93.867188h-85.335938v-119.46875h85.335938zm51.199218 93.867188h-34.132812v-85.335938h34.132812zm0 0" fill="url(#linear2)"/><path d="m162.132812 136.53125h17.066407v17.066406h-17.066407zm0 0" fill="url(#linear3)"/><path d="m196.265625 136.53125h17.066406v17.066406h-17.066406zm0 0" fill="url(#linear4)"/><path d="m162.132812 170.667969h17.066407v17.066406h-17.066407zm0 0" fill="url(#linear4)"/><path d="m196.265625 170.667969h17.066406v17.066406h-17.066406zm0 0" fill="url(#linear6)"/><path d="m162.132812 204.800781h17.066407v17.066407h-17.066407zm0 0" fill="url(#linear6)"/><path d="m196.265625 204.800781h17.066406v17.066407h-17.066406zm0 0" fill="url(#linear8)"/><path d="m102.402344 204.800781h17.066406v17.066407h-17.066406zm0 0" fill="url(#linear9)"/><path d="m256 204.800781h17.066406v17.066407h-17.066406zm0 0" fill="url(#linear10)"/><path d="m256 170.667969h17.066406v17.066406h-17.066406zm0 0" fill="url(#linear11)"/><path d="m187.734375 76.800781v-17.066406c-26.335937 0-51.625 7.933594-73.152344 22.949219l9.769531 14c18.640626-13.007813 40.558594-19.882813 63.382813-19.882813zm0 0" fill="url(#linear12)"/><path d="m110.101562 108.5-11.949218-12.199219c-8.308594 8.148438-15.476563 17.375-21.285156 27.425781l14.765624 8.546876c5.042969-8.714844 11.25-16.714844 18.46875-23.773438zm0 0" fill="url(#linear13)"/><path d="m249.964844 369.433594 12.070312 12.066406c17.464844-17.464844 34.480469-42.890625 35.199219-43.964844l-14.203125-9.46875c-.164062.25-16.78125 25.082032-33.066406 41.367188zm0 0" fill="url(#linear14)"/><path d="m224.367188 403.566406 12.066406 12.066406 17.066406-17.066406-12.066406-12.066406zm0 0" fill="url(#linear15) "/>/svg>
-
-              </div>
-            </li>
-
-          </ul>
-
-        </div>
-      </section>
-
-
-
-
-
-      <!-- 
-        - #ABOUT
-      -->
-
-      <section class="section section-divider gray about" id="about">
-        <div class="container">
-
-          <div class="about-banner">
-
-            <img src="./assets/images/ysak logo.jpg" width="250"  
-              class="abs-img scale-up-anim">
+                  </div>
+                </li>
+              </ul>
+            </div>
           </div>
-<hr>
-          <div class="about-content">
-
-            <h2 class="h2 section-title">
-              we give Led tv maintenance
-              <span class="span">HOME TO HOME IN SERVICE ADDIS</span>
-            </h2>
-
-            <p class="section-text">
-             for your expensive led tv we fix it with special care and replace with original accessory
-             , we specialized in led tv maintenance we are always ready to serve you ,             </p>
-
-            <ul class="about-list">
-
-              <li class="about-item">
-                <ion-icon name="checkmark-outline"></ion-icon>
-
-                <span class="span">   Led Tv</span>
-              </li>
-
-               
-
-              <li class="about-item">
-                <ion-icon name="checkmark-outline"></ion-icon>
-
-                <span class="span">Smart Tv</span>
-              </li>
-
-              <li class="about-item">
-                <ion-icon name="checkmark-outline"></ion-icon>
-
-                <span class="span">android Tv</span>
-              </li>
-
-              <li class="about-item">
-                <ion-icon name="checkmark-outline" ></ion-icon>
-
-                <span class="span">normal Led Tv</span>
-              </li>
-
-             
-            
-            </ul>
-            <hr>
-       
-
-          </div>
-
         </div>
-      </section>
-
-
-
-
-
-      <!-- 
-        - #FOOD MENU
-      -->
-
-      <section class="section food-menu" id="food-menu">
-        <div class="container">
-
-          <p class="section-subtitle"> we have original second hand Led Tv for sell</p>
-
-          <h2 class="h2 section-title">
-           with 1 year <span class="span">guarantee</span>
-          </h2>
-
-          <p class="section-text">
-we buy your old Led Tv and we sell that TV         </p>
-
-          <ul class="fiter-list">
-
-            <li>
-              <button class="filter-btn  active">All</button>
-            </li>
-
-            <li>
-              <button class="filter-btn">LG</button>
-            </li>
-
-            <li>
-              <button class="filter-btn">SAMSUNG</button>
-            </li>
-
-            <li>
-              <button class="filter-btn">SONY</button>
-            </li>
-
-            <li>
-              <button class="filter-btn">LIFE STAR</button>
-            </li>
-
-          </ul>
-
-          <ul class="food-menu-list">
-
-            <li>
-              <div class="food-menu-card">
-
-                <div class="card-banner">
-                  <img src="./assets/images/lgtv.jpg" width="300" height="300" loading="lazy"
-                    alt="Fried Chicken Unlimited" class="w-100">
-
-                  <div class="badge">-15%</div>
-
-                  <button class="btn food-menu-btn" onclick="location.href='tel:0926737152';">Call now</button>
-                </div>
-
-                <div class="wrapper">
-                  <p class="category">LG 50 inch</p>
-
-                  <div class="rating-wrapper">
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                  </div>
-                </div>
-
-                <h3 class="h3 card-title">LG 50 ' LG515</h3>
-
-                <div class="price-wrapper">
-
-                  <p class="price-text">Price:</p>
-
-                  <data class="price">30000</data>
-
-                  <del class="del" value="69.00">35000</del>
-
-                </div>
-
-              </div>
-            </li>
-
-            <li>
-              <div class="food-menu-card">
-
-                <div class="card-banner">
-                  <img src="./assets/images/samsung tv.jfif" width="300" height="300" loading="lazy"
-                    alt="Burger King Whopper" class="w-100">
-
-                  <div class="badge">-10%</div>
-
-                  <button class="btn food-menu-btn" onclick="location.href='tel:0926737152';">Call Now</button>
-                </div>
-
-                <div class="wrapper">
-                  <p class="category">samsung 55</p>
-
-                  <div class="rating-wrapper">
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                  </div>
-                </div>
-
-                <h3 class="h3 card-title">samsung ump7350
-                   smart tv
-                </h3>
-
-                <div class="price-wrapper">
-
-                  <p class="price-text">Price:</p>
-
-                  <data class="price" value="29.00">45000</data>
-
-                  <del class="del">48000</del>
-
-                </div>
-
-              </div>
-            </li>
-
-            <li>
-              <div class="food-menu-card">
-
-                <div class="card-banner">
-                  <img src="./assets/images/sony tv.jfif" width="300" height="300" loading="lazy"
-                    alt="White Castle Pizzas" class="w-100">
-
-                  <div class="badge">-25%</div>
-
-                  <button class="btn food-menu-btn" onclick="location.href='tel:0926737152';">call Now</button>
-                </div>
-
-                <div class="wrapper">
-                  <p class="category">sony</p>
-
-                  <div class="rating-wrapper">
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                  </div>
-                </div>
-
-                <h3 class="h3 card-title"> 40klv-403</h3>
-
-                <div class="price-wrapper">
-
-                  <p class="price-text">Price:</p>
-
-                  <data class="price" value="49.00">37000</data>
-
-                  <del class="del">42000</del>
-
-                </div>
-
-              </div>
-            
-          </ul>
-
-
-        </div>
-      </section>
-
-
-
-
-
-      <!-- 
-        - #CTA
-      -->
-
-      <section class="section section-divider white cta" style="background-image: url('./assets/images/bgimg.webp')">
-        <div class="container">
-
-          <div class="cta-content">
-
-            <h2  class="h2 section-title ">
-              come to our office or call 
-              <span class="span">0926737152</span>
-            </h2>
-           
-            <p>
-              <img src="./assets/images/banner.jpg.jpg" width="300"  loading="lazy" 
-             >
-
+      </div>
+    </section>
+     <p style="margin-left: 40px; ; color: rgb(16, 27, 187); font-weight: 300; font-family:sans-serif;">
+we send you Different accessary by EMS if you are far from ADDISS ABEBA
+    </p> 
+    <!-- End of About Section -->
+
+    <!-- Team Section -->
+    <section class="pt-20 pb-48">
+      <!-- Section Container -->
+      <div class="container mx-auto px-4">
+        <!-- Text Box -->
+        <!-- <div class="flex flex-wrap justify-center text-center mb-24">
+          <div class="w-full lg:w-6/12 px-4">
+            <h2 class="text-4xl font-semibold">Here are our heroes</h2>
+            <p class="text-lg leading-relaxed m-4 text-gray-600">
+              According to the National Oceanic and Atmospheric
+              Administration, Ted, Scambos, NSIDClead scentist, puts the
+              potentially record maximum.
             </p>
-            <br>
-           
-            <button class="btn btn-hover" onclick="location.href='tel:0926737152';">call now</button>
           </div>
+        </div> -->
+        <!-- Flex Row Container -->
+        <div class="flex flex-wrap">
+          <!-- Item -->
+          <div class="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4" data-aos="fade-in">
+            <div class="px-6">
+              <!-- Image -->
+              <img
+                alt="..."
+                src="lg logo.png"
+                class="shadow-lg rounded-full max-w-full mx-auto"
+                style="max-width: 120px;"
+              />
+              <div class="pt-6 text-center">
+                <h5 class="text-xl font-bold">LG </h5>
+                <p class="mt-1 text-sm text-gray-500 uppercase font-semibold">
+                  All model
+                </p>
+                <!-- Social Media Buttons -->
+                
+              </div>
+            </div>
+          </div>
+          <!-- Item -->
+          <div class="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4" data-aos="fade-in" data-aos-delay="400">
+            <div class="px-6">
+              <!-- Image -->
+              <img
+                alt="..."
+                src="samsung logo.png"
+                class="shadow-lg rounded-full max-w-full mx-auto"
+                style="max-width: 120px;"
+              />
+              <div class="pt-6 text-center">
+                <h5 class="text-xl font-bold">SAMSUNG</h5>
+                <p class="mt-1 text-sm text-gray-500 uppercase font-semibold">
+                  all model
+                </p>
+                <!-- Social Media Buttons -->
+                <!-- <div class="mt-6">
+                  <button class="bg-red-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1" type="button">
+                    
+                    <i class="fab fa-google"></i>
+                  </button>
+                  <button class="bg-blue-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1" type="button">
+             
+                    <i class="fab fa-facebook-f"></i>
+                  </button>
+                </div> -->
+              </div>
+            </div>
+          </div>
+          <!-- Item -->
+          <div class="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4" data-aos="fade-in" data-aos-delay="600">
+            <div class="px-6">
+              <!-- Image -->
+              <img
+                alt="..."
+                src="konka logo.png"
+                class="shadow-lg rounded-full max-w-full mx-auto"
+                style="max-width: 120px;"
+              />
+              <div class="pt-6 text-center">
+                <h5 class="text-xl font-bold">konka</h5>
+                <p class="mt-1 text-sm text-gray-500 uppercase font-semibold">
+                 All model
+                </p>
+                <!-- Social Media Buttons -->
+                <!-- <div class="mt-6">
+                  <button class="bg-red-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1" type="button">
+                    
+                    <i class="fab fa-google"></i>
+                  </button>
+                  <button class="bg-blue-400 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1" type="button">
+                 
+                    <i class="fab fa-twitter"></i>
+                  </button>
+                  <button class="bg-gray-800 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1" type="button">
+                   
+                    <i class="fab fa-instagram"></i>
+                  </button>
+                </div> -->
+              </div>
+            </div>
+          </div>
+          <!-- ------------------ -->
+          <div class="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4" data-aos="fade-in" data-aos-delay="600">
+            <div class="px-6">
+              <!-- Image -->
+              <img
+                alt="..."
+                src="jvc logo.png"
+                class="shadow-lg rounded-full max-w-full mx-auto"
+                style="max-width: 120px;"
+              />
+              <div class="pt-6 text-center">
+                <h5 class="text-xl font-bold">jvc</h5>
+                <p class="mt-1 text-sm text-gray-500 uppercase font-semibold">
+                  All model
+                </p>
+                <!-- Social Media Buttons -->
+                <!-- <div class="mt-6">
+                  <button class="bg-red-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1" type="button">
+               =
+                    <i class="fab fa-google"></i>
+                  </button>
+                  <button class="bg-blue-400 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1" type="button">
+             
+                    <i class="fab fa-twitter"></i>
+                  </button>
+                  <button class="bg-gray-800 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1" type="button">
+                  
+                    <i class="fab fa-instagram"></i>
+                  </button>
+                </div> -->
+              </div>
+            </div>
+          </div>
+          
+          <!-- ------------------- -->
+          <!-- Item -->
+          <div class="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4" data-aos="fade-in" data-aos-delay="800">
+            <div class="px-6">
+              <!-- Image -->
+              <img
+                alt="..."
+                src="philips logo.png"
+                class="shadow-lg rounded-full max-w-full mx-auto"
+                style="max-width: 120px;"
+              />
+              <div class="pt-6 text-center">
+                <h5 class="text-xl font-bold">philips</h5>
+                <p class="mt-1 text-sm text-gray-500 uppercase font-semibold">
+                  from 32 - 55
+                </p>
+                <!-- Social Media Buttons -->
+                <!-- <div class="mt-6">
+                  <button class="bg-pink-500 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1" type="button">
+                  
+                    <i class="fab fa-dribbble"></i>
+                  </button>
+                  <button class="bg-red-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1" type="button">
+                    
+                    <i class="fab fa-google"></i>
+                  </button>
+                  <button class="bg-blue-400 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1" type="button">
 
-          <figure class="cta-banner">
-            <img src="./assets/images/sonyy tv.png" width="700" height="637" loading="lazy" alt="Burger"
-              class="w-100 cta-img">
-
-            <img src="./assets/images/sale-shape.png" width="216" height="226" loading="lazy"
-              alt="get up to 50% off now" class="abs-img scale-up-anim">
-          </figure>
-
+                    <i class="fab fa-twitter"></i>
+                  </button>
+                  <button class="bg-gray-800 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1" type="button">
+                   
+                    <i class="fab fa-instagram"></i>
+                  </button>
+                </div> -->
+              </div>
+            </div>
+          </div>
         </div>
-      </section>
+      </div>
+    </section>
+    <!-- End of Team Section -->
 
-
-
-
-
-      <!-- 
-        - #DELIVERY
-      -->
-
-      
+    <!-- Contact Section -->
+    <section class="pb-20 relative block bg-gray-900">
+      <!-- Making Polygon Shape in Background -->
+      <div
+        class="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20"
+        style="height: 80px; transform: translateZ(0);"
+      >
+        <svg
+          class="absolute bottom-0 overflow-hidden"
+          xmlns="http://www.w3.org/2000/svg"
+          preserveAspectRatio="none"
+          version="1.1"
+          viewBox="0 0 2560 100"
+          x="0"
+          y="0"
+        >
+          <polygon
+            class="text-gray-900 fill-current"
+            points="2560 0 2560 100 0 100"
+          ></polygon>
+        </svg>
+      </div>
+      <!-- Section Container -->
+      <div class="container mx-auto px-4 lg:pt-24 lg:pb-64">
+        <!-- Text Box -->
+        <div class="flex flex-wrap text-center justify-center">
+          <div class="w-full lg:w-6/12 px-4">
+            <h2 class="text-4xl font-semibold text-white">We Buy Broken Tvs</h2>
+            <p class="text-lg leading-relaxed mt-4 mb-4 text-gray-500">
+             if you have screen broken , defective  LED tv we will buy you and take by our transprort service
+            </p>
+          </div>
+        </div>
+        <!-- Flex Row Container -->
+        <div class="flex flex-wrap mt-12 justify-center">
+          <!-- Item -->
+          <div class="w-full lg:w-3/12 px-4 text-center" data-aos="fade-in" data-aos-delay="600">
+            <div class="text-gray-900 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center">
+              <!-- Icon -->
+              <i class="fas fa-medal text-xl"></i>
+            </div>
+            <!-- Text Box -->
+            <h5 class="text-xl mt-5 font-semibold text-white">
+              Excelent Services
+            </h5>
+            <!-- <p class="mt-2 mb-4 text-gray-500">
+              Some quick example text to build on the card title and make up
+              the bulk of the card's content.
+            </p> -->
+          </div>
+          <br>
+          <!-- Item -->
+          <div class="w-full lg:w-3/12 px-4 text-center" data-aos="fade-in" data-aos-delay="400">
+            <div class="text-gray-900 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center">
+              <!-- Icon -->
+              <i class="fas fa-poll text-xl"></i>
+            </div>
+            <!-- Text Box -->
+            <h5 class="text-xl mt-5 font-semibold text-white">
+            original accessory
+            </h5>
+            <!-- <p class="mt-2 mb-4 text-gray-500">
+              Some quick example text to build on the card title and make up
+              the bulk of the card's content.
+            </p> -->
+          </div>
+          <!-- Item -->
+          <div class="w-full lg:w-3/12 px-4 text-center" data-aos="fade-in">
+            <div class="text-gray-900 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center">
+              <!-- Icon -->
+              <i class="fas fa-lightbulb text-xl"></i>
+            </div>
+            <!-- Text Box -->
+            <h5 class="text-xl mt-5 font-semibold text-white">Reliable guarantee</h5>
+            <!-- <p class="mt-2 mb-4 text-gray-500">
+              Some quick example text to build on the card title and make up
+              the bulk of the card's content.
+            </p> -->
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Contact Form -->
+    <section class="relative block py-24 lg:pt-0 bg-gray-900">
+      <!-- Container -->
+      <div class="container mx-auto px-4" data-aos="fade-in">
+        <div class="flex flex-wrap justify-center lg:-mt-64 -mt-48">
+          <div class="w-full lg:w-6/12 px-4">
+            <div class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-gray-300">
+             
+              <div class="flex-auto p-5 lg:p-10">
+                <br>
+                <h4 class="text-2xl font-semibold">Want to work with us?</h4>
+                <p class="leading-relaxed mt-1 mb-4 text-gray-600">
+                  Complete this form and we will get back to you in 24 hours.
+                </p>
+                <!-- Name -->
+                <div class="relative w-full mb-3 mt-8">
+                  <label class="block uppercase text-gray-700 text-xs font-bold mb-2" for="full-name">
+                    Full Name
+                  </label
+                  ><input
+                    type="text"
+                    class="px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full"
+                    placeholder="Full Name"
+                    style="transition: all 0.15s ease 0s;"
+                  />
+                </div>
+                <!-- Email -->
+                <div class="relative w-full mb-3">
+                  <label class="block uppercase text-gray-700 text-xs font-bold mb-2" for="email">
+                    Email
+                  </label
+                  ><input
+                    type="email"
+                    class="px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full"
+                    placeholder="Email"
+                    style="transition: all 0.15s ease 0s;"
+                  />
+                </div>
+                <!-- Message -->
+                <div class="relative w-full mb-3">
+                  <label class="block uppercase text-gray-700 text-xs font-bold mb-2" for="message">
+                    Message
+                  </label
+                  ><textarea
+                    rows="4"
+                    cols="80"
+                    class="px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full"
+                    placeholder="Type a message..."
+                  ></textarea>
+                </div>
+                <div class="text-center mt-6">
+                  <button
+                    class="bg-gray-900 text-white active:bg-gray-700 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1"
+                    type="button"
+                    style="transition: all 0.15s ease 0s;"
+                  >
+                    Send Message
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End of Contact Section -->
   </main>
 
-
-
-
-
-  <!-- 
-    - #FOOTER
-  -->
-
-  <footer class="footer">
-
-    <div class="footer-top" >
-      <div class="container">
-
-        <div class="footer-brand">
-
-          <a href="" class="logo">TV MAINTENANCE<span class="span">.</span></a>
-
-          <p class="footer-text">
-        we work with creadit for company
-            <p>
-            we accept payment through TELE BIRR
-          </p>          </p>
-
-          <ul class="social-list">
-
-            <li>
-              <a href="#" class="social-link">
-                <ion-icon name="logo-facebook"></ion-icon>
-              </a>
-            </li>
-
-            <li>
-              <a href="#" class="social-link">
-                <ion-icon name="logo-twitter"></ion-icon>
-              </a>
-            </li>
-
-            <li>
-              <a href="#" class="social-link">
-                <ion-icon name="logo-instagram"></ion-icon>
-              </a>
-            </li>
-
-            <li>
-              <a href="#" class="social-link">
-                <ion-icon name="logo-pinterest"></ion-icon>
-              </a>
-            </li>
-
-          </ul>
-
+  <!-- Footer Section -->
+  <footer class="relative bg-gray-300 pt-8 pb-6">
+    <!-- Making Polygon Shape in Background -->
+    <div
+      class="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20"
+      style="height: 80px; transform: translateZ(0);"
+    >
+      <svg
+        class="absolute bottom-0 overflow-hidden"
+        xmlns="http://www.w3.org/2000/svg"
+        preserveAspectRatio="none"
+        version="1.1"
+        viewBox="0 0 2560 100"
+        x="0"
+        y="0"
+      >
+        <polygon
+          class="text-gray-300 fill-current"
+          points="2560 0 2560 100 0 100"
+        ></polygon>
+      </svg>
+    </div>
+    <!-- Section Container -->
+    <div class="container mx-auto px-4">
+      <!-- Text Box Container -->
+      <div class="flex flex-wrap">
+        <div class="w-full lg:w-6/12 px-4">
+          <h4 class="text-3xl font-semibold">Let's keep in touch!</h4>
+          <h5 class="text-lg mt-0 mb-2 text-gray-700">
+            Find us on any of these platforms, we respond 1-2 business days.
+          </h5>
+          <!-- Social Media Buttons -->
+          <div class="mt-6">
+            <a href="https://t.me/ysakelectronics" target="_blank"><i class="fab fa-telegram  bg-white text-blue-400 shadow-lg font-lg p-3 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2 inline-block text-center"></i></a>
+            <a href="https://facebook.com/groups/1548159168880227/" target="_blank"><i class="fab fa-facebook-square bg-white text-blue-600 shadow-lg font-lg p-3 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2 inline-block text-center"></i></a>
+            <a href="https://www.tiktok.com/@tvmaintenance?_r=1&_d=e4bc2hadjdkcjl&sec_uid=MS4wLjABAAAAb_3W7UdeguFq1JJBag0TjBrY7KdizrOwuUDKbI92jw5P0t4RdfHFzQ8ohxR99g0l&share_author_id=6906166845549102085&sharer_language=en&source=h5_m&u_code=e305amd9kk85a9&timestamp=1681924499&user_id=7122479853060441094&sec_user_id=MS4wLjABAAAACpnadmBfuPAKOUPeWQuovhr7aXi6gq2AHBBd4r5ydlPeiCE_1IR015Z7fPpgDDHN&utm_source=copy&utm_campaign=client_share&utm_medium=android&share_iid=7204056869429266181&share_link_id=e8926b91-189c-402d-bb17-227ab9b49af2&share_app_id=1233&ugbiz_name=Account&ug_btm=b6880%2Cb2878" target="_blank"><i class=" bg-white  shadow-lg font-lg p-3 items-center justify-center align-center rounded-full focus:outline-none  inline-flex text-center">
+              <img src="tiktok.png" alt="" width="15">
+            </i></a>
+          </div> 
         </div>
-
-        <ul class="footer-list">
-
-          <li>
-            <p class="footer-list-title">Contact Info</p>
-          </li>
-
-          <li>
-            <p class="footer-list-item">+251-926737152</p>
-          </li>
-
-          <li>
-            <p class="footer-list-item">https://t.me/ysakelectronics</p>
-          </li>
-
-          <li>
-            <address class="footer-list-item">ADDIS ABEBA, KOLFE, ATENA TERA</address>
-          </li>
-
-        </ul>
-
-
-
+      <!-- List Container -->
+      <!-- <div class="w-full lg:w-6/12 px-4">
+          <div class="flex flex-wrap items-top mb-6">
+            <!-- List 1 -->
+            <!-- <div class="w-full lg:w-4/12 px-4 ml-auto">
+              <span class="block uppercase text-gray-600 text-sm font-semibold mb-2">Useful Links</span>
+              <ul class="list-unstyled">
+                <li>
+                  <a class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
+                     href="https://www.creative-tim.com/presentation">About Us</a>
+                </li>
+                <li>
+                  <a class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
+                     href="https://blog.creative-tim.com">Blog</a>
+                </li>
+                <li>
+                  <a class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
+                     href="https://www.github.com/creativetimofficial">Github</a>
+                </li>
+                <li>
+                  <a class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
+                     href="https://www.creative-tim.com/bootstrap-themes/free">Free Products</a>
+                </li>
+              </ul>
+       
+            <div class="w-full lg:w-4/12 px-4">
+              <span class="block uppercase text-gray-600 text-sm font-semibold mb-2">Other Resources</span>
+              <ul class="list-unstyled">
+                <li>
+                  <a class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
+                     href="https://github.com/creativetimofficial/argon-design-system/blob/master/LICENSE.md">MIT License</a>
+                </li>
+                <li>
+                  <a class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
+                     href="https://creative-tim.com/terms">Terms &amp; Conditions</a>
+                </li>
+                <li>
+                  <a class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
+                     href="https://creative-tim.com/privacy">Privacy Policy</a>
+                </li>
+                <li>
+                  <a class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
+                     href="https://creative-tim.com/contact-us">Contact Us</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>  -->
+      <!-- Line Break -->
+     
+     
+      <hr class="my-1 border-gray-400" />
+      <!-- Footer Text -->
+     <br> <div class="flex flex-wrap items-center md:justify-between justify-center">
+        <div class="w-full md:w-4/12 px-4 mx-auto text-center">
+          <br>
+          
+        </div>
       </div>
     </div>
+    <hr>
+    <br>
+    <div class="text-center text-gray-600 font-semibold py-1">
+      Copyright © 2023 Ysak electronics
+  
+        Tv maintenance
 
-    <div class="footer-bottom">
-      <div class="container">
-        <p class="copyright-text">
-          &copy; 2022 <a href="#" class="copyright-link">ysak electronics</a> All Rights Reserved.
-        </p>
-      </div>
     </div>
-
   </footer>
-
-
-
-
-
-  <!-- 
-    - #BACK TO TOP
-  -->
-
-  <a href="#top" class="back-top-btn" aria-label="Back to top" data-back-top-btn>
-    <ion-icon name="chevron-up"></ion-icon>
-  </a>
-
-  <!-- 
-    - custom js link
-  -->
-  <script src="./assets/js/script.js" defer></script>
-
-  <!-- 
-    - ionicon link
-  -->
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
+  <!-- End of Footer Section -->
 </body>
-
+<!-- AOS.js -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  // AOS.init();
+  AOS.init({
+    delay: 200, // values from 0 to 3000, with step 50ms
+    duration: 1500, // values from 0 to 3000, with step 50ms
+    once: false, // whether animation should happen only once - while scrolling down
+    mirror: false, // whether elements should animate out while scrolling past them
+  });
+</script>
+<!-- Navigation Script -->
+<script>
+  function toggleNavbar(collapseID) {
+    document.getElementById(collapseID).classList.toggle("hidden");
+    document.getElementById(collapseID).classList.toggle("block");
+  }
+</script>
 </html>
