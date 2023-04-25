@@ -1,39 +1,57 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="led_tv.png">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"/>
-    <!-- AOS Library -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <!-- Tailwind Library -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/creativetimofficial/tailwind-starter-kit/compiled-tailwind.min.css" />
-    <title>Ysak electronics </title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="led_tv.png">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" />
+  <!-- AOS Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- Tailwind Library -->
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/gh/creativetimofficial/tailwind-starter-kit/compiled-tailwind.min.css" />
+  <link rel="stylesheet" href="style.css">
+  <title>Ysak electronics </title>
 </head>
+
 <body class="text-gray-800 antialiased">
 
   <!-- Navigation -->
   <nav class="top-0 absolute z-50 w-full flex flex-wrap items-center justify-between px-2 py-3 navbar-expand-lg">
-      <div class="container px-4 mx-auto flex flex-wrap items-center justify-between">
-        <!-- Nav Left Side -->
-          <div class="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
-              <a class="text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-no-wrap uppercase text-white" href="https://t.me/ysakelectronics">
-                <!-- Nav Title -->
-                Ysak electronics
-              </a>
-              <!-- Hamburger Menu (Mobile) -->
-              <button class="cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none" type="button" onclick="toggleNavbar('example-collapse-navbar')">
-                <!-- Icon -->
-                <i class="text-white fas fa-bars"></i>
-              </button>
-          </div>
-          <!-- Nav Flex Row -->
-          <div class="lg:flex flex-grow items-center bg-white lg:bg-transparent lg:shadow-none hidden" id="example-collapse-navbar">
-            <!-- <ul class="flex flex-col lg:flex-row list-none mr-auto">
+    <div class="container px-4 mx-auto flex flex-wrap items-center justify-between">
+      <!-- Nav Left Side -->
+      <div class="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
+        <a class="text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-no-wrap uppercase text-white"
+          href="https://t.me/ysakelectronics">
+          <!-- Nav Title -->
+          Ysak electronics
+        </a>
+        <!-- Hamburger Menu (Mobile) -->
+
+
+        <!-- <button class="cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none" type="button" onclick="toggleNavbar('example-collapse-navbar')"> -->
+        <!-- Icon -->
+        <!-- <i class="text-white fas fa-bars"></i>
+              </button> -->
+
+        <!-- <button id="clk" onclick="amarick();"> language</button> -->
+
+        <label class="button" for="toggle" id="clk">
+          <input id="toggle" type="checkbox">
+          <span class="slider"></span>
+        </label>
+
+
+      </div>
+
+      <!-- Nav Flex Row -->
+      <div class="lg:flex flex-grow items-center bg-white lg:bg-transparent lg:shadow-none hidden"
+        id="example-collapse-navbar">
+        <!-- <ul class="flex flex-col lg:flex-row list-none mr-auto">
               <li class="flex items-center">
                 <a class="lg:text-white lg:hover:text-gray-300 text-gray-800 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold" 
                 href="https://www.creative-tim.com/learning-lab/tailwindcss-starter-project#/landing">
@@ -45,35 +63,35 @@
             </ul> -->
         <!-- Nav Right Side -->
         <!-- <ul class="flex flex-col lg:flex-row list-none lg:ml-auto"> -->
-          <!-- Social Media Button -->
-          <!-- <li class="flex items-center">
+        <!-- Social Media Button -->
+        <!-- <li class="flex items-center">
             <a class="lg:text-white lg:hover:text-gray-300 text-gray-800 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
               href="#pablo"> -->
-              <!-- Icon -->
-              <!-- <i class="lg:text-gray-300 text-gray-500 fab fa-facebook text-lg leading-lg "></i>
+        <!-- Icon -->
+        <!-- <i class="lg:text-gray-300 text-gray-500 fab fa-facebook text-lg leading-lg "></i>
               <span class="lg:hidden inline-block ml-2">Share</span>
             </a>
           </li> -->
-          <!-- Social Media Button -->
-          <!-- <li class="flex items-center">
+        <!-- Social Media Button -->
+        <!-- <li class="flex items-center">
             <a class="lg:text-white lg:hover:text-gray-300 text-gray-800 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
               href="#pablo"> -->
-              <!-- Icon -->
-              <!-- <i class="lg:text-gray-300 text-gray-500 fab fa-twitter text-lg leading-lg "></i>
+        <!-- Icon -->
+        <!-- <i class="lg:text-gray-300 text-gray-500 fab fa-twitter text-lg leading-lg "></i>
               <span class="lg:hidden inline-block ml-2">Tweet</span>
             </a>
           </li> -->
-          <!-- Social Media Button -->
-          <!-- <li class="flex items-center">
+        <!-- Social Media Button -->
+        <!-- <li class="flex items-center">
             <a class="lg:text-white lg:hover:text-gray-300 text-gray-800 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
               href="#pablo"> -->
-              <!-- Icon -->
-              <!-- <i class="lg:text-gray-300 text-gray-500 fab fa-github text-lg leading-lg "></i>
+        <!-- Icon -->
+        <!-- <i class="lg:text-gray-300 text-gray-500 fab fa-github text-lg leading-lg "></i>
               <span class="lg:hidden inline-block ml-2">Star</span>
             </a>
           </li> -->
-          <!-- Button -->
-          <!-- <li class="flex items-center">
+        <!-- Button -->
+        <!-- <li class="flex items-center">
             <button
               class="bg-white text-gray-800 active:bg-gray-100 text-xs font-bold uppercase px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3"
               type="button"
@@ -93,8 +111,7 @@
   <main>
     <div class="relative pt-16 pb-32 flex content-center items-center justify-center" style="min-height: 75vh;">
       <!-- Background Image -->
-      <div
-        class="absolute top-0 w-full h-full bg-center bg-cover"
+      <div class="absolute top-0 w-full h-full bg-center bg-cover"
         style='background-image: url("https://www.theplasmacentre.com/images/sized/zoom/products_28841_fs1500bayo.jpg");'>
         <!-- Overlay -->
         <span id="blackOverlay" class="w-full h-full absolute opacity-75 bg-black"></span>
@@ -104,35 +121,23 @@
         <div class="items-center flex flex-wrap">
           <div class="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
             <div class="pr-12">
-              <h1 class="text-white font-semibold text-5xl" data-aos="fade-up">
+              <h1 class="text-white font-semibold text-5xl" data-aos="fade-up" id="ysak_tv">
                 Ysak LED tv maintenance.
               </h1>
-              <p class="mt-4 text-lg text-gray-300" data-aos="fade-right" data-aos-delay="1000">
+              <p class="mt-4 text-lg text-gray-300" data-aos="fade-right" data-aos-delay="1000" id="frst">
                 We understand that your TV is an important part of your home entertainment system,
-                if your Tv are being defective  we are ready to help you get the most out of it.   
+                if your Tv are being defective we are ready to help you get the most out of it.
               </p>
             </div>
           </div>
         </div>
       </div>
       <!-- Making Polygon Shape in Background -->
-      <div
-        class="top-auto bottom-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden"
-        style="height: 70px; transform: translateZ(0);"
-      >
-        <svg
-          class="absolute bottom-0 overflow-hidden"
-          xmlns="http://www.w3.org/2000/svg"
-          preserveAspectRatio="none"
-          version="1.1"
-          viewBox="0 0 2560 100"
-          x="0"
-          y="0"
-        >
-          <polygon
-            class="text-gray-300 fill-current"
-            points="2560 0 2560 100 0 100"
-          ></polygon>
+      <div class="top-auto bottom-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden"
+        style="height: 70px; transform: translateZ(0);">
+        <svg class="absolute bottom-0 overflow-hidden" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
+          version="1.1" viewBox="0 0 2560 100" x="0" y="0">
+          <polygon class="text-gray-300 fill-current" points="2560 0 2560 100 0 100"></polygon>
         </svg>
       </div>
     </div>
@@ -147,17 +152,19 @@
           <div class="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center" data-aos="fade-right" data-aos-delay="1200">
             <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
               <div class="px-4 py-5 flex-auto">
-                <div class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-red-400">
+                <div
+                  class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-red-400">
                   <!-- Icon -->
                   <i class="fas fa-guarranty">
                     <img src="guarantee.png" alt="" width="300">
                   </i>
                 </div>
                 <!-- Text Box -->
-                <h6 class="text-xl font-semibold">guaranted work</h6>
-                <p class="mt-2 mb-4 text-gray-600">
-                we want our customers to feel confident and satisfied with the services we provide. we guarantee on all of our maintenance services.       
-    </p>
+                <h6 class="text-xl font-semibold" id="guarranty">guaranted work</h6>
+                <p class="mt-2 mb-4 text-gray-600" id="guarranty_txt">
+                  we want our customers to feel confident and satisfied with the services we provide. we guarantee on
+                  all of our maintenance services.
+                </p>
               </div>
             </div>
           </div>
@@ -165,14 +172,15 @@
           <div class="w-full md:w-4/12 px-4 text-center" data-aos="fade-up" data-aos-delay="1400">
             <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
               <div class="px-4 py-5 flex-auto">
-                <div class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-blue-400">
+                <div
+                  class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-blue-400">
                   <!-- Icon -->
                   <i class="fas fa-atom"></i>
                 </div>
                 <!-- Text Box -->
-                <h6 class="text-xl font-semibold">Full of accessary</h6>
-                <p class="mt-2 mb-4 text-gray-600">
-straring from 19 inch tv upto 65 inch screen tvs we have all types of televisions accessory                </p>
+                <h6 class="text-xl font-semibold" id="accessary">Full of accessary</h6>
+                <p class="mt-2 mb-4 text-gray-600" id="accessary_txt">
+                  straring from 19 inch tv upto 65 inch screen tvs we have all types of televisions accessory </p>
               </div>
             </div>
           </div>
@@ -180,16 +188,17 @@ straring from 19 inch tv upto 65 inch screen tvs we have all types of television
           <div class="pt-6 w-full md:w-4/12 px-4 text-center" data-aos="fade-left" data-aos-delay="1600">
             <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
               <div class="px-4 py-5 flex-auto">
-                <div class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-green-400">
+                <div
+                  class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-green-400">
                   <!-- Icon -->
                   <i class="fas fa-bolt">
                     <!-- <img src="technician.png" alt=""> -->
                   </i>
                 </div>
                 <!-- Text Box -->
-                <h6 class="text-xl font-semibold">Specialized Technician</h6>
-                <p class="mt-2 mb-4 text-gray-600">
-we specialized our service giving only led tvs with specialized technician                </p>
+                <h6 class="text-xl font-semibold" id="specialized">Specialized Technician</h6>
+                <p class="mt-2 mb-4 text-gray-600" id="specialized_txt">
+                  we specialized our service giving only led tvs with specialized technician </p>
               </div>
             </div>
           </div>
@@ -200,56 +209,47 @@ we specialized our service giving only led tvs with specialized technician      
           <!-- Text Box Container -->
           <div class="w-full md:w-5/12 px-4 mr-auto ml-auto" data-aos="zoom-in-right">
             <!-- Text Box -->
-            <div class="text-gray-600 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-gray-100">
+            <div
+              class="text-gray-600 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-gray-100">
               <!-- Icon -->
               <i class="fas fa-star text-xl"></i>
             </div>
-            <h3 class="text-3xl mb-2 font-semibold leading-normal">
+            <h3 class="text-3xl mb-2 font-semibold leading-normal" id="question">
               does your Tv have problem ?
             </h3>
-            <p class="text-lg font-light leading-relaxed mt-4 mb-4 text-gray-700">
+            <p class="text-lg font-light leading-relaxed mt-4 mb-4 text-gray-700" id="question_txt">
               here we are to help you.
               We understand that your TV is an important part of your home entertainment system,
               we don`t want you be sad when it have problem with in it .
             </p>
-            <p class="text-lg font-light leading-relaxed mt-0 mb-4 text-gray-700">
-in case you have any issues we are happy to help you from our heart            </p>
-            
-              
-              <button class="bg-red-400 font-bold text-gray-800 mt-8" onclick="location.href='tel:0926737152'">Call Now !</buttonclass=>
+            <p class="text-lg font-light leading-relaxed mt-0 mb-4 text-gray-700" id="question_txt2">
+              in case you have any issues we are happy to help you from our heart </p>
 
-            
+
+            <button class="bg-red-400 font-bold text-gray-800 mt-8" onclick="location.href='tel:0926737152'"> Call Now
+              !</button>
+
+
           </div>
 
           <!-- Image Cap & Text Card -->
           <div class="w-full md:w-4/12 px-4 mr-auto ml-auto" data-aos="flip-left" data-aos-delay="1000">
-            <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg bg-orange-500">
+            <div
+              class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg bg-orange-500">
               <!-- Image -->
-              <img
-                alt="..."
-                src="ysak logo.jpg"
-                class="w-full align-middle rounded-t-lg"
-              />
+              <img alt="..." src="ysak logo.jpg" class="w-full align-middle rounded-t-lg" />
               <blockquote class="relative p-8 mb-4">
                 <!-- Making Polygon Shape in Card -->
-                <svg
-                  preserveAspectRatio="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 583 95"
-                  class="absolute left-0 w-full block"
-                  style="height: 95px; top: -94px;"
-                >
-                  <polygon
-                    points="-30,95 583,95 583,65"
-                    class="text-orange-500 fill-current"
-                  ></polygon>
+                <svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 583 95"
+                  class="absolute left-0 w-full block" style="height: 95px; top: -94px;">
+                  <polygon points="-30,95 583,95 583,65" class="text-orange-500 fill-current"></polygon>
                 </svg>
                 <!-- Text Box -->
-                <h4 class="text-xl font-bold text-white">
-                 just call to us
+                <h4 class="text-xl font-bold text-white" id="call">
+                  just call to us
                 </h4>
-                <p class="text-md font-light mt-2 text-white">
-                  we are 12/7 ready to give you home to home LED Tv maintenance services in ADDISS ABEBA.                </p>
+                <p class="text-md font-light mt-2 text-white" id="call_txt">
+                  we are 12/7 ready to give you home to home LED Tv maintenance services in ADDISS ABEBA. </p>
               </blockquote>
             </div>
           </div>
@@ -261,46 +261,31 @@ in case you have any issues we are happy to help you from our heart            <
     <!-- About Section -->
     <section class="relative py-20">
       <!-- Making Polygon Shape in Background -->
-      <div
-        class="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20"
-        style="height: 80px; transform: translateZ(0);"
-      >
-        <svg
-          class="absolute bottom-0 overflow-hidden"
-          xmlns="http://www.w3.org/2000/svg"
-          preserveAspectRatio="none"
-          version="1.1"
-          viewBox="0 0 2560 100"
-          x="0"
-          y="0"
-        >
-          <polygon
-            class="text-white fill-current"
-            points="2560 0 2560 100 0 100"
-          ></polygon>
+      <div class="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20"
+        style="height: 80px; transform: translateZ(0);">
+        <svg class="absolute bottom-0 overflow-hidden" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
+          version="1.1" viewBox="0 0 2560 100" x="0" y="0">
+          <polygon class="text-white fill-current" points="2560 0 2560 100 0 100"></polygon>
         </svg>
       </div>
       <!-- Section Container -->
       <div class="container mx-auto px-4">
         <div class="items-center flex flex-wrap">
-          <div class="w-full md:w-4/12 ml-auto mr-auto px-4" data-aos="flip-right" data-aos-delay="1000"> 
+          <div class="w-full md:w-4/12 ml-auto mr-auto px-4" data-aos="flip-right" data-aos-delay="1000">
             <!-- Image -->
-            <img
-              alt="..."
-              class="max-w-full rounded-lg shadow-lg"
-              src="temp_crt_china.jpg"
-            />
+            <img alt="..." class="max-w-full rounded-lg shadow-lg" src="temp_crt_china.jpg" />
           </div>
           <!-- Text Box Container-->
           <div class="w-full md:w-5/12 ml-auto mr-auto px-4" data-aos="zoom-in-left">
             <div class="md:pr-12">
-              <div class="text-pink-600 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-pink-300">
+              <div
+                class="text-pink-600 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-pink-300">
                 <!-- Icon -->
                 <i class="fas fa-rocket text-xl"></i>
               </div>
               <!-- Text Box -->
-              <h3 class="text-3xl font-semibold">For Different Brand Tvs</h3>
-              <p class="mt-4 text-lg leading-relaxed text-gray-600">
+              <h3 class="text-3xl font-semibold" id="different_brand">For Different Brand Tvs</h3>
+              <p class="mt-4 text-lg leading-relaxed text-gray-600" id="different_brand_txt">
                 we have lots original and tested -
               </p>
               <!-- List -->
@@ -308,14 +293,15 @@ in case you have any issues we are happy to help you from our heart            <
                 <li class="py-2">
                   <div class="flex items-center">
                     <div>
-                      <span class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-pink-600 bg-pink-200 mr-3">
+                      <span
+                        class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-pink-600 bg-pink-200 mr-3">
                         <!-- Icon -->
                         <i class="fas fa-tv text-xl"></i>
                       </span>
                     </div>
                     <div>
                       <h4 class="text-gray-600">
-                       power supply
+                        power supply
                       </h4>
                     </div>
                   </div>
@@ -323,7 +309,8 @@ in case you have any issues we are happy to help you from our heart            <
                 <li class="py-2">
                   <div class="flex items-center">
                     <div>
-                      <span class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-pink-600 bg-pink-200 mr-3">
+                      <span
+                        class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-pink-600 bg-pink-200 mr-3">
                         <!-- Icon -->
                         <i class="fas fa-tv text-xl"></i>
                       </span>
@@ -336,7 +323,8 @@ in case you have any issues we are happy to help you from our heart            <
                 <li class="py-2">
                   <div class="flex items-center">
                     <div>
-                      <span class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-pink-600 bg-pink-200 mr-3">
+                      <span
+                        class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-pink-600 bg-pink-200 mr-3">
                         <!-- Icon -->
                         <i class="fas fa-tv text-xl"></i>
                       </span>
@@ -344,7 +332,7 @@ in case you have any issues we are happy to help you from our heart            <
                     <div>
                       <h4 class="text-gray-600">T-con </h4>
                     </div>
-                  
+
                   </div>
                 </li>
               </ul>
@@ -353,9 +341,9 @@ in case you have any issues we are happy to help you from our heart            <
         </div>
       </div>
     </section>
-     <p style="margin-left: 40px; ; color: rgb(16, 27, 187); font-weight: 300; font-family:sans-serif;">
-we send you Different accessary by EMS if you are far from ADDISS ABEBA
-    </p> 
+    <p style="margin-left: 40px; ; color: rgb(16, 27, 187); font-weight: 300; font-family:system-ui; " id="send_board">
+      we send you Different accessary by EMS if you are far from ADDISS ABEBA
+    </p>
     <!-- End of About Section -->
 
     <!-- Team Section -->
@@ -379,19 +367,15 @@ we send you Different accessary by EMS if you are far from ADDISS ABEBA
           <div class="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4" data-aos="fade-in">
             <div class="px-6">
               <!-- Image -->
-              <img
-                alt="..."
-                src="lg logo.png"
-                class="shadow-lg rounded-full max-w-full mx-auto"
-                style="max-width: 120px;"
-              />
+              <img alt="..." src="lg logo.png" class="shadow-lg rounded-full max-w-full mx-auto"
+                style="max-width: 120px;" />
               <div class="pt-6 text-center">
                 <h5 class="text-xl font-bold">LG </h5>
                 <p class="mt-1 text-sm text-gray-500 uppercase font-semibold">
                   All model
                 </p>
                 <!-- Social Media Buttons -->
-                
+
               </div>
             </div>
           </div>
@@ -399,12 +383,8 @@ we send you Different accessary by EMS if you are far from ADDISS ABEBA
           <div class="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4" data-aos="fade-in" data-aos-delay="400">
             <div class="px-6">
               <!-- Image -->
-              <img
-                alt="..."
-                src="samsung logo.png"
-                class="shadow-lg rounded-full max-w-full mx-auto"
-                style="max-width: 120px;"
-              />
+              <img alt="..." src="samsung logo.png" class="shadow-lg rounded-full max-w-full mx-auto"
+                style="max-width: 120px;" />
               <div class="pt-6 text-center">
                 <h5 class="text-xl font-bold">SAMSUNG</h5>
                 <p class="mt-1 text-sm text-gray-500 uppercase font-semibold">
@@ -428,16 +408,12 @@ we send you Different accessary by EMS if you are far from ADDISS ABEBA
           <div class="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4" data-aos="fade-in" data-aos-delay="600">
             <div class="px-6">
               <!-- Image -->
-              <img
-                alt="..."
-                src="konka logo.png"
-                class="shadow-lg rounded-full max-w-full mx-auto"
-                style="max-width: 120px;"
-              />
+              <img alt="..." src="konka logo.png" class="shadow-lg rounded-full max-w-full mx-auto"
+                style="max-width: 120px;" />
               <div class="pt-6 text-center">
                 <h5 class="text-xl font-bold">konka</h5>
                 <p class="mt-1 text-sm text-gray-500 uppercase font-semibold">
-                 All model
+                  All model
                 </p>
                 <!-- Social Media Buttons -->
                 <!-- <div class="mt-6">
@@ -461,12 +437,8 @@ we send you Different accessary by EMS if you are far from ADDISS ABEBA
           <div class="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4" data-aos="fade-in" data-aos-delay="600">
             <div class="px-6">
               <!-- Image -->
-              <img
-                alt="..."
-                src="jvc logo.png"
-                class="shadow-lg rounded-full max-w-full mx-auto"
-                style="max-width: 120px;"
-              />
+              <img alt="..." src="jvc logo.png" class="shadow-lg rounded-full max-w-full mx-auto"
+                style="max-width: 120px;" />
               <div class="pt-6 text-center">
                 <h5 class="text-xl font-bold">jvc</h5>
                 <p class="mt-1 text-sm text-gray-500 uppercase font-semibold">
@@ -490,18 +462,14 @@ we send you Different accessary by EMS if you are far from ADDISS ABEBA
               </div>
             </div>
           </div>
-          
+
           <!-- ------------------- -->
           <!-- Item -->
           <div class="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4" data-aos="fade-in" data-aos-delay="800">
             <div class="px-6">
               <!-- Image -->
-              <img
-                alt="..."
-                src="philips logo.png"
-                class="shadow-lg rounded-full max-w-full mx-auto"
-                style="max-width: 120px;"
-              />
+              <img alt="..." src="philips logo.png" class="shadow-lg rounded-full max-w-full mx-auto"
+                style="max-width: 120px;" />
               <div class="pt-6 text-center">
                 <h5 class="text-xl font-bold">philips</h5>
                 <p class="mt-1 text-sm text-gray-500 uppercase font-semibold">
@@ -537,23 +505,11 @@ we send you Different accessary by EMS if you are far from ADDISS ABEBA
     <!-- Contact Section -->
     <section class="pb-20 relative block bg-gray-900">
       <!-- Making Polygon Shape in Background -->
-      <div
-        class="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20"
-        style="height: 80px; transform: translateZ(0);"
-      >
-        <svg
-          class="absolute bottom-0 overflow-hidden"
-          xmlns="http://www.w3.org/2000/svg"
-          preserveAspectRatio="none"
-          version="1.1"
-          viewBox="0 0 2560 100"
-          x="0"
-          y="0"
-        >
-          <polygon
-            class="text-gray-900 fill-current"
-            points="2560 0 2560 100 0 100"
-          ></polygon>
+      <div class="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20"
+        style="height: 80px; transform: translateZ(0);">
+        <svg class="absolute bottom-0 overflow-hidden" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
+          version="1.1" viewBox="0 0 2560 100" x="0" y="0">
+          <polygon class="text-gray-900 fill-current" points="2560 0 2560 100 0 100"></polygon>
         </svg>
       </div>
       <!-- Section Container -->
@@ -561,9 +517,9 @@ we send you Different accessary by EMS if you are far from ADDISS ABEBA
         <!-- Text Box -->
         <div class="flex flex-wrap text-center justify-center">
           <div class="w-full lg:w-6/12 px-4">
-            <h2 class="text-4xl font-semibold text-white">We Buy Broken Tvs</h2>
-            <p class="text-lg leading-relaxed mt-4 mb-4 text-gray-500">
-             if you have screen broken , defective  LED tv we will buy you and take by our transprort service
+            <h2 class="text-4xl font-semibold text-white" id="broken_tv">We Buy Broken Tvs</h2>
+            <p class="text-lg leading-relaxed mt-4 mb-4 text-gray-500" id="broken_tv_txt">
+              if you have screen broken , defective LED tv we will buy you and take by our transprort service
             </p>
           </div>
         </div>
@@ -571,12 +527,13 @@ we send you Different accessary by EMS if you are far from ADDISS ABEBA
         <div class="flex flex-wrap mt-12 justify-center">
           <!-- Item -->
           <div class="w-full lg:w-3/12 px-4 text-center" data-aos="fade-in" data-aos-delay="600">
-            <div class="text-gray-900 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center">
+            <div
+              class="text-gray-900 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center">
               <!-- Icon -->
               <i class="fas fa-medal text-xl"></i>
             </div>
             <!-- Text Box -->
-            <h5 class="text-xl mt-5 font-semibold text-white">
+            <h5 class="text-xl mt-5 font-semibold text-white" id="excellent_service">
               Excelent Services
             </h5>
             <!-- <p class="mt-2 mb-4 text-gray-500">
@@ -587,13 +544,14 @@ we send you Different accessary by EMS if you are far from ADDISS ABEBA
           <br>
           <!-- Item -->
           <div class="w-full lg:w-3/12 px-4 text-center" data-aos="fade-in" data-aos-delay="400">
-            <div class="text-gray-900 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center">
+            <div
+              class="text-gray-900 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center">
               <!-- Icon -->
               <i class="fas fa-poll text-xl"></i>
             </div>
             <!-- Text Box -->
-            <h5 class="text-xl mt-5 font-semibold text-white">
-            original accessory
+            <h5 class="text-xl mt-5 font-semibold text-white" id="original_accessory">
+              original accessory
             </h5>
             <!-- <p class="mt-2 mb-4 text-gray-500">
               Some quick example text to build on the card title and make up
@@ -602,12 +560,13 @@ we send you Different accessary by EMS if you are far from ADDISS ABEBA
           </div>
           <!-- Item -->
           <div class="w-full lg:w-3/12 px-4 text-center" data-aos="fade-in">
-            <div class="text-gray-900 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center">
+            <div
+              class="text-gray-900 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center">
               <!-- Icon -->
               <i class="fas fa-lightbulb text-xl"></i>
             </div>
             <!-- Text Box -->
-            <h5 class="text-xl mt-5 font-semibold text-white">Reliable guarantee</h5>
+            <h5 class="text-xl mt-5 font-semibold text-white" id="reliable_guaranty">Reliable guarantee</h5>
             <!-- <p class="mt-2 mb-4 text-gray-500">
               Some quick example text to build on the card title and make up
               the bulk of the card's content.
@@ -623,7 +582,7 @@ we send you Different accessary by EMS if you are far from ADDISS ABEBA
         <div class="flex flex-wrap justify-center lg:-mt-64 -mt-48">
           <div class="w-full lg:w-6/12 px-4">
             <div class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-gray-300">
-             
+
               <div class="flex-auto p-5 lg:p-10">
                 <br>
                 <h4 class="text-2xl font-semibold">Want to work with us?</h4>
@@ -634,44 +593,30 @@ we send you Different accessary by EMS if you are far from ADDISS ABEBA
                 <div class="relative w-full mb-3 mt-8">
                   <label class="block uppercase text-gray-700 text-xs font-bold mb-2" for="full-name">
                     Full Name
-                  </label
-                  ><input
-                    type="text"
+                  </label><input type="text"
                     class="px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full"
-                    placeholder="Full Name"
-                    style="transition: all 0.15s ease 0s;"
-                  />
+                    placeholder="Full Name" style="transition: all 0.15s ease 0s;" />
                 </div>
                 <!-- Email -->
                 <div class="relative w-full mb-3">
                   <label class="block uppercase text-gray-700 text-xs font-bold mb-2" for="email">
                     Email
-                  </label
-                  ><input
-                    type="email"
+                  </label><input type="email"
                     class="px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full"
-                    placeholder="Email"
-                    style="transition: all 0.15s ease 0s;"
-                  />
+                    placeholder="Email" style="transition: all 0.15s ease 0s;" />
                 </div>
                 <!-- Message -->
                 <div class="relative w-full mb-3">
                   <label class="block uppercase text-gray-700 text-xs font-bold mb-2" for="message">
                     Message
-                  </label
-                  ><textarea
-                    rows="4"
-                    cols="80"
+                  </label><textarea rows="4" cols="80"
                     class="px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full"
-                    placeholder="Type a message..."
-                  ></textarea>
+                    placeholder="Type a message..."></textarea>
                 </div>
                 <div class="text-center mt-6">
                   <button
                     class="bg-gray-900 text-white active:bg-gray-700 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1"
-                    type="button"
-                    style="transition: all 0.15s ease 0s;"
-                  >
+                    type="button" style="transition: all 0.15s ease 0s;">
                     Send Message
                   </button>
                 </div>
@@ -687,23 +632,11 @@ we send you Different accessary by EMS if you are far from ADDISS ABEBA
   <!-- Footer Section -->
   <footer class="relative bg-gray-300 pt-8 pb-6">
     <!-- Making Polygon Shape in Background -->
-    <div
-      class="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20"
-      style="height: 80px; transform: translateZ(0);"
-    >
-      <svg
-        class="absolute bottom-0 overflow-hidden"
-        xmlns="http://www.w3.org/2000/svg"
-        preserveAspectRatio="none"
-        version="1.1"
-        viewBox="0 0 2560 100"
-        x="0"
-        y="0"
-      >
-        <polygon
-          class="text-gray-300 fill-current"
-          points="2560 0 2560 100 0 100"
-        ></polygon>
+    <div class="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20"
+      style="height: 80px; transform: translateZ(0);">
+      <svg class="absolute bottom-0 overflow-hidden" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
+        version="1.1" viewBox="0 0 2560 100" x="0" y="0">
+        <polygon class="text-gray-300 fill-current" points="2560 0 2560 100 0 100"></polygon>
       </svg>
     </div>
     <!-- Section Container -->
@@ -711,24 +644,28 @@ we send you Different accessary by EMS if you are far from ADDISS ABEBA
       <!-- Text Box Container -->
       <div class="flex flex-wrap">
         <div class="w-full lg:w-6/12 px-4">
-          <h4 class="text-3xl font-semibold">Let's keep in touch!</h4>
-          <h5 class="text-lg mt-0 mb-2 text-gray-700">
+          <h4 class="text-3xl font-semibold" id="social_media">Let's keep in touch!</h4>
+          <h5 class="text-lg mt-0 mb-2 text-gray-700" id="media_txt">
             Find us on any of these platforms, we respond 1-2 business days.
           </h5>
           <!-- Social Media Buttons -->
           <div class="mt-6">
-            <a href="https://t.me/ysakelectronics" target="_blank"><i class="fab fa-telegram  bg-white text-blue-400 shadow-lg font-lg p-3 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2 inline-block text-center"></i></a>
-            <a href="https://facebook.com/groups/1548159168880227/" target="_blank"><i class="fab fa-facebook-square bg-white text-blue-600 shadow-lg font-lg p-3 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2 inline-block text-center"></i></a>
-            <a href="https://www.tiktok.com/@tvmaintenance?_r=1&_d=e4bc2hadjdkcjl&sec_uid=MS4wLjABAAAAb_3W7UdeguFq1JJBag0TjBrY7KdizrOwuUDKbI92jw5P0t4RdfHFzQ8ohxR99g0l&share_author_id=6906166845549102085&sharer_language=en&source=h5_m&u_code=e305amd9kk85a9&timestamp=1681924499&user_id=7122479853060441094&sec_user_id=MS4wLjABAAAACpnadmBfuPAKOUPeWQuovhr7aXi6gq2AHBBd4r5ydlPeiCE_1IR015Z7fPpgDDHN&utm_source=copy&utm_campaign=client_share&utm_medium=android&share_iid=7204056869429266181&share_link_id=e8926b91-189c-402d-bb17-227ab9b49af2&share_app_id=1233&ugbiz_name=Account&ug_btm=b6880%2Cb2878" target="_blank"><i class=" bg-white  shadow-lg font-lg p-3 items-center justify-center align-center rounded-full focus:outline-none  inline-flex text-center">
-              <img src="tiktok.png" alt="" width="15">
-            </i></a>
-          </div> 
+            <a href="https://t.me/ysakelectronics" target="_blank"><i
+                class="fab fa-telegram  bg-white text-blue-400 shadow-lg font-lg p-3 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2 inline-block text-center"></i></a>
+            <a href="https://facebook.com/groups/1548159168880227/" target="_blank"><i
+                class="fab fa-facebook-square bg-white text-blue-600 shadow-lg font-lg p-3 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2 inline-block text-center"></i></a>
+            <a href="https://www.tiktok.com/@tvmaintenance?_r=1&_d=e4bc2hadjdkcjl&sec_uid=MS4wLjABAAAAb_3W7UdeguFq1JJBag0TjBrY7KdizrOwuUDKbI92jw5P0t4RdfHFzQ8ohxR99g0l&share_author_id=6906166845549102085&sharer_language=en&source=h5_m&u_code=e305amd9kk85a9&timestamp=1681924499&user_id=7122479853060441094&sec_user_id=MS4wLjABAAAACpnadmBfuPAKOUPeWQuovhr7aXi6gq2AHBBd4r5ydlPeiCE_1IR015Z7fPpgDDHN&utm_source=copy&utm_campaign=client_share&utm_medium=android&share_iid=7204056869429266181&share_link_id=e8926b91-189c-402d-bb17-227ab9b49af2&share_app_id=1233&ugbiz_name=Account&ug_btm=b6880%2Cb2878"
+              target="_blank"><i
+                class=" bg-white  shadow-lg font-lg p-3 items-center justify-center align-center rounded-full focus:outline-none  inline-flex text-center">
+                <img src="tiktok.png" alt="" width="15">
+              </i></a>
+          </div>
         </div>
-      <!-- List Container -->
-      <!-- <div class="w-full lg:w-6/12 px-4">
+        <!-- List Container -->
+        <!-- <div class="w-full lg:w-6/12 px-4">
           <div class="flex flex-wrap items-top mb-6">
             <!-- List 1 -->
-            <!-- <div class="w-full lg:w-4/12 px-4 ml-auto">
+        <!-- <div class="w-full lg:w-4/12 px-4 ml-auto">
               <span class="block uppercase text-gray-600 text-sm font-semibold mb-2">Useful Links</span>
               <ul class="list-unstyled">
                 <li>
@@ -773,26 +710,27 @@ we send you Different accessary by EMS if you are far from ADDISS ABEBA
           </div>
         </div>
       </div>  -->
-      <!-- Line Break -->
-     
-     
-      <hr class="my-1 border-gray-400" />
-      <!-- Footer Text -->
-     <br> <div class="flex flex-wrap items-center md:justify-between justify-center">
-        <div class="w-full md:w-4/12 px-4 mx-auto text-center">
-          <br>
-          
+        <!-- Line Break -->
+
+
+        <hr class="my-1 border-gray-400" />
+        <!-- Footer Text -->
+        <br>
+        <div class="flex flex-wrap items-center md:justify-between justify-center">
+          <div class="w-full md:w-4/12 px-4 mx-auto text-center">
+            <br>
+
+          </div>
         </div>
       </div>
-    </div>
-    <hr>
-    <br>
-    <div class="text-center text-gray-600 font-semibold py-1">
-      Copyright © 2023 Ysak electronics
-  
+      <hr>
+      <br>
+      <div class="text-center text-gray-600 font-semibold py-1">
+        Copyright © 2023 Ysak electronics
+
         Tv maintenance
 
-    </div>
+      </div>
   </footer>
   <!-- End of Footer Section -->
 </body>
@@ -813,5 +751,93 @@ we send you Different accessary by EMS if you are far from ADDISS ABEBA
     document.getElementById(collapseID).classList.toggle("hidden");
     document.getElementById(collapseID).classList.toggle("block");
   }
+
+
+
+
+  //----------------------------------------------------- for amharic language------------------------------
+  var button = document.getElementById("clk");
+
+  // Add a click event listener to the button
+  button.addEventListener("click", function () {
+    // ysak tv
+    document.getElementById("ysak_tv").innerText = "ይሳቅ ፍላት ቲቪ ጥገና";
+
+
+    // Get the element with the "amhtxt" id
+    document.getElementById("frst").innerText = "የእርስዎ ቲቪ የቤትዎ መዝናኛ ስርዓት አስፈላጊ አካል መሆኑን እንገነዘባለን ነገር ግን ቲቪዎ ቢበላሽቦት  ልንረዳዎ ዝግጁ ነን።";
+
+
+
+
+
+    // Change the text of the element to "changed lang"
+
+
+    // --------------------- guarranty -------------------------
+
+    document.getElementById("guarranty").innerText = "  ዋስትና ያለው ስራ"
+
+    document.getElementById("guarranty_txt").innerText = "ደንበኞቻችን በምንሰጣቸው አገልግሎቶች በራስ መተማመን እና እርካታ እንዲሰማቸው እንፈልጋለን። ለሁሉም የጥገና አገልግሎቶቻችን ዋስትና እንሰጣለን."
+    // ------------accessary-
+
+    document.getElementById("accessary").innerText = "    የተሟላ መለዋወጫ"
+
+    document.getElementById("accessary_txt").innerText = "ከ 19 ኢንች ቲቪ እስከ 65 ኢንች ስክሪን ቲቪዎች ሁሉንም አይነት የቴሌቪዥኖች መለዋወጫዎች አለን።"
+
+    document.getElementById("specialized").innerText = "ብቁ ባለሙያዎች"
+    document.getElementById("specialized_txt").innerText = "    ፍላት ቲቪ በመስራት ጥርሳቸውን የነቀሉ ብቁ ባለሙያዎች ስብስብ"
+
+    // ------------------does your tv have problem
+
+    document.getElementById("question").innerText = "ቲቪዎ ተበላሽቶአል ?"
+    // -------------question text
+    document.getElementById("question_txt").innerText = "የእርስዎ ቲቪ ለቤትዎ መዝናኛ ስርዓት አስፈላጊ አካል መሆኑን እንረዳለን፣ አያድርገውና በውስጡ ችግር ሲያጋጥመው (ቢበላሽቦት) እንዲያዝኑ አንፈልግም ። ነገር ግን ምንም አይነት ችግር ካጋጠሞት ከልባችን ልንረዳዎት ዝግጁ ነን "
+    document.getElementById("question_txt2").innerText = " በሚመቾት ሰዐትይደውሉ"
+
+    // -----------------call
+
+    document.getElementById("call").innerText = "ወደ እኛ ይደውሉ "
+
+    document.getElementById("call_txt").innerText = "በአዲስ አበባ ውስጥ በቀን ለ12 ሰዐታት በሳምንት ለ7 ቀን የቤት ለቤት ቲቪ የጥገና አገልግሎት ልንሰጥዎ ዝግጁ ነን።"
+
+    // -------- for different brand tv
+
+
+    document.getElementById("different_brand").innerText = "ለተለያዩ ብራንድ ቲቪዎች"
+
+
+    document.getElementById("different_brand_txt").innerText = "ብዛት ያላቸው ኦሪጅናል እና ቼክ የተደረጉ -"
+    // ---------------send
+    document.getElementById("send_board").innerText = "ከአዲስ አበባ ውጪ ለሆናችሁ በ ክፍለሀገር ሹፌር ያላችሁበት ድረስ እንልክልዎታለን "
+    // ---------
+    document.getElementById("broken_tv").innerText = "የተሰበሩ ፍላት ቲቪዎችን እንገዛለን "
+    document.getElementById("broken_tv_txt").innerText = "ስክሪን የተሰበረ ፍላት ቲቪ ካሎት ያሉበት መተን እንገዛዎታለን "
+
+    // 
+    document.getElementById("excellent_service").innerText = "ጥራት ያለው ስራ"
+
+    // 
+
+    document.getElementById("original_accessory").innerText = "ኦሪጅናል መለዋወጫ"
+
+    // waranty
+    document.getElementById("reliable_guaranty").innerText = "ዋስትና"
+
+    // media
+
+    document.getElementById("social_media").innerText = "በእነዚህ ማህበራዊ ሚዲያ ይከተሉን"
+
+    document.getElementById("media_txt").innerText = "follow "
+
+      
+    
+
+  });
+
+
+
+
 </script>
+
 </html>
